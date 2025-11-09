@@ -47,5 +47,5 @@
 ## Post-Event Retrospective
 1. Gather quantitative data (retention deltas, revenue uplift, completion rates).
 2. Collect qualitative feedback via in-game surveys.
-3. Document learnings in confluence, adjust future event designs.
+3. Document learnings in Confluence, adjust future event designs.
 4. Update backlog with balance changes or feature requests derived from the event.
