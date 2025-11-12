@@ -1,0 +1,130 @@
+# main.py
+import time
+from datetime import timedelta
+from big_harvest import (
+    GameSession, Plant, Animal, ProductionBuilding, MarketOrder,
+    PlantState
+)
+
+TICK_SEC = 0.5
+RUN_FOR_SEC = 20  # demo-duur
+
+def setup_game(gs: GameSession):
+    # startvoorraad
+    gs.farm.inventory.update({
+        "wheat_seed": 5, "water": 10, "wheat": 0, "egg": 0, "flour": 0
+    })
+
+    # velden + planten
+    # NB: we negeren "seed" consumptie voor simplicity; wil je realistisch, trek 1 seed af.
+    for _ in range(3):
+        plant = Plant(crop_type="wheat", growth_time=4, yield_amount=3)
+        gs.farm.plant_crop(field_index=len(gs.farm.fields), plant=plant)
+
+    # dieren
+    chicken = Animal(animal_type="chicken", product_type="egg",
+                     production_time=5, product_amount=2)
+    gs.farm.add_animal(chicken)
+    chicken.feed()
+
+    # building (molen: wheat -> flour)
+    mill = ProductionBuilding(
+        building_type="mill",
+        recipe={"wheat": 2},
+        output_product="flour",
+        output_amount=1,
+        production_time=3
+    )
+    gs.farm.add_building(mill, cost=0)
+    mill.add_to_queue(3)  # 3 batches in de wachtrij
+
+    # een voorbeeld order (verloopt over 15s)
+    gs.market_orders.append(MarketOrder(
+        order_id="O-1",
+        required_items={"flour": 2, "egg": 2},
+        reward=120,
+        expires_in=15
+    ))
+
+def print_status(gs: GameSession):
+    print(f"Coins: {gs.farm.coins} | Inventory: {gs.farm.inventory}")
+    # fields
+    field_states = []
+    for i, p in enumerate(gs.farm.fields):
+        if not p:
+            field_states.append(f"Field {i}: empty")
+        else:
+            if p.check_growth():
+                state = "READY"
+            else:
+                state = p.state.value
+            field_states.append(f"Field {i}: {p.crop_type} [{state}] rem={int(p.time_remaining())}s")
+    print(" | ".join(field_states))
+
+    # animals
+    for i, a in enumerate(gs.farm.animals):
+        a.check_production()
+        print(f"Animal {i}: {a.animal_type} [{a.state.value}] rem={int(a.time_remaining())}s")
+
+    # buildings
+    for i, b in enumerate(gs.farm.buildings):
+        b.check_production()
+        print(f"Building {i}: {b.building_type} "
+              f"{'PROD' if b.is_producing else 'IDLE'} rem={int(b.time_remaining())}s queue={len(b.queue)}")
+
+def main():
+    gs = GameSession(player_id="player_1")
+    gs.login()
+    setup_game(gs)
+
+    start = time.time()
+    last_print = 0
+
+    while time.time() - start < RUN_FOR_SEC:
+        # 1. timers checken
+        ready = gs.check_timers()
+
+        # 2. oogsten/verzamelen
+        collected = gs.harvest_and_collect()
+        # velden leegmaken als geoogst (optioneel)
+        for i, plant in enumerate(gs.farm.fields):
+            if plant and plant.state == PlantState.HARVESTED:
+                gs.farm.fields[i] = None
+
+        # 3. queues vullen
+        gs.fill_queues()
+
+        # 4. running buildings starten als idle en queue aanwezig
+        for b in gs.farm.buildings:
+            if not b.is_producing:
+                b.process_queue(gs.farm.inventory)
+
+        # 5. orders verwerken
+        orders = gs.process_orders()
+
+        # 6. (optioneel) herplanten als veld leeg is en we genoeg water/seed hebben
+        for i, p in enumerate(gs.farm.fields):
+            if p is None and gs.farm.max_fields > i:
+                new_p = Plant(crop_type="wheat", growth_time=4, yield_amount=3)
+                gs.farm.plant_crop(i, new_p)
+
+        # 7. logging (elke 0.5s)
+        if time.time() - last_print >= TICK_SEC:
+            if any(ready.values()) or collected or orders["completed_orders"] or orders["expired_orders"]:
+                print("\n--- TICK ---")
+                if any(ready.values()):
+                    print("Ready:", ready)
+                if collected:
+                    print("Collected:", collected)
+                if orders["completed_orders"] or orders["expired_orders"]:
+                    print("Orders:", orders)
+            print_status(gs)
+            last_print = time.time()
+
+        time.sleep(0.1)  # kleine pauze
+
+    out = gs.logout()
+    print("\nSession ended:", out)
+
+if __name__ == "__main__":
+    main()
