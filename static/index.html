@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <title>Big Harvest Farming – Web</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #2b3d2b;
+      color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    #game {
+      width: 100%;
+      max-width: 1100px;
+      background: #324632;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      padding: 16px 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .stats {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+    }
+    .badge {
+      background: rgba(0,0,0,0.25);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr;
+      gap: 16px;
+    }
+
+    #field-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      background: #243424;
+      padding: 8px;
+      border-radius: 8px;
+    }
+    .field {
+      height: 90px;
+      border-radius: 8px;
+      background: #3a523a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      text-align: center;
+      padding: 4px;
+      cursor: pointer;
+      transition: transform 0.1s, box-shadow 0.1s, background 0.1s;
+      white-space: pre-line;
+    }
+    .field.empty {
+      background: #283828;
+      border: 1px dashed rgba(255,255,255,0.2);
+      color: #9fbf9f;
+    }
+    .field.state-ready {
+      background: #4fab4f;
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+    }
+    .field:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    #side-panel {
+      background: #243424;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+    #side-panel h2 {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .section {
+      margin-bottom: 12px;
+    }
+    .section h3 {
+      font-size: 13px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.8;
+    }
+    ul {
+      list-style: none;
+      margin-top: 4px;
+    }
+    li {
+      margin-bottom: 3px;
+    }
+
+    button {
+      border: none;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      background: #ffc857;
+      color: #222;
+      font-weight: 600;
+      margin-right: 6px;
+      margin-top: 4px;
+      transition: transform 0.1s, box-shadow 0.1s, background 0.1s;
+    }
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      background: #ffd874;
+    }
+
+    .log {
+      font-size: 11px;
+      margin-top: 8px;
+      max-height: 120px;
+      overflow-y: auto;
+      background: rgba(0,0,0,0.2);
+      padding: 6px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div id="game">
+    <header>
+      <div>
+        <h1 style="font-size:18px; margin-bottom:4px;">Big Harvest Farming 🌾</h1>
+        <div style="font-size:12px; opacity:0.8;">Klik op velden om te planten/oogsten.</div>
+      </div>
+      <div class="stats">
+        <div class="badge">💰 Coins: <span id="coins">0</span></div>
+        <div class="badge">📦 Inventory: <span id="inventory">-</span></div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <div>
+        <h2 style="font-size:14px; margin-bottom:4px;">Velden</h2>
+        <div id="field-grid"></div>
+        <div style="margin-top:8px;">
+          <button id="btn-harvest-all">Alles oogsten</button>
+        </div>
+      </div>
+
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <title>Big Harvest Farming – Web</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #2b3d2b;
+      color: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+    }
+    #game {
+      width: 100%;
+      max-width: 1100px;
+      background: #324632;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      padding: 16px 20px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+    .stats {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+    }
+    .badge {
+      background: rgba(0,0,0,0.25);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 2fr 1.2fr;
+      gap: 16px;
+    }
+
+    #field-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+      background: #243424;
+      padding: 8px;
+      border-radius: 8px;
+    }
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 4px;
+      cursor: pointer;
+    .field.empty {
+      background: #283828;
+      border: 1px dashed rgba(255,255,255,0.2);
+      color: #9fbf9f;
+    }
+    .field.state-ready {
+      background: #4fab4f;
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.4);
+    }
+    .field:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    #side-panel {
+      background: #243424;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+    #side-panel h2 {
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+    .section {
+      margin-bottom: 12px;
+    }
+      margin-top: 4px;
+    }
+
+    button {
+      border: none;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      cursor: pointer;
+      background: #ffc857;
+      color: #222;
+      font-weight: 600;
+      margin-right: 6px;
+      margin-top: 4px;
+      transition: transform 0.1s, box-shadow 0.1s, background 0.1s;
+    }
+    button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      background: #ffd874;
+    }
+
+    .log {
+      font-size: 11px;
+      margin-top: 8px;
+  <div id="game">
+    <header>
+      <div>
+      <div class="stats">
+        <div class="badge">💰 Coins: <span id="coins">0</span></div>
+        <div class="badge">📦 Inventory: <span id="inventory">-</span></div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <div>
+        <h2 style="font-size:14px; margin-bottom:4px;">Velden</h2>
+        <div id="field-grid"></div>
+        <div style="margin-top:8px;">
+          <button id="btn-harvest-all">Alles oogsten</button>
+        </div>
+      </div>
+
+      <div id="side-panel">
+        <h2>Boerderij-overzicht</h2>
+
+        <div class="section">
+          <h3>Dieren</h3>
+          <ul id="animal-list"></ul>
+        </div>
+
+        <div class="section">
+          <h3>Gebouwen</h3>
+          <ul id="building-list"></ul>
+        </div>
+
+        <div class="section">
+          <h3>Orders</h3>
+          <ul id="order-list"></ul>
+        </div>
+
+        <div class="section">
+          <h3>Log</h3>
+          <div id="log" class="log"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let lastState = null;
+
+    function log(msg) {
+      const logEl = document.getElementById("log");
+      const t = new Date().toLocaleTimeString();
+      const line = document.createElement("div");
+      line.textContent = "[" + t + "] " + msg;
+      logEl.prepend(line);
+      while (logEl.children.length > 40) {
+        logEl.removeChild(logEl.lastChild);
+      }
+    }
+
+    function doAction(action, payload = {}) {
+      fetch("/api/action", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action, ...payload })
+      })
+        .then(r => r.json())
+        .then(data => {
+          if (!data.ok) {
+            log("Actie '" + action + "' mislukt");
+          } else {
+            if (data.collected) {
+              log("Ge-oogst: " + JSON.stringify(data.collected));
+            } else {
+              log("Actie '" + action + "' uitgevoerd");
+            }
+          }
+          fetchState();
+        })
+        .catch(err => {
+          console.error(err);
+          log("Fout bij actie: " + err);
+        });
+    }
+
+    function renderState(state) {
+      // Coins & inventory
+      document.getElementById("coins").textContent = state.coins;
+      document.getElementById("inventory").textContent =
+        Object.keys(state.inventory).length
+          ? Object.entries(state.inventory).map(([k,v]) => k + ":" + v).join(", ")
+          : "-";
+
+      // Fields
+      const grid = document.getElementById("field-grid");
+      grid.innerHTML = "";
+      state.fields.forEach(f => {
+        const div = document.createElement("div");
+        div.className = "field";
+        div.dataset.index = f.index;
+
+        if (f.empty) {
+          div.classList.add("empty");
+          div.textContent = "+ Plant";
+        } else {
+          let label = f.crop_type + "\n" + f.state.toUpperCase();
+          const rem = Math.ceil(f.time_remaining || 0);
+          if (rem > 0 && f.state !== "ready") {
+            label += "\n" + rem + "s";
+          }
+          div.textContent = label;
+          if (f.state === "ready") {
+            div.classList.add("state-ready");
+          }
+        }
+
+        div.onclick = () => {
+          if (f.empty) {
+            doAction("plant", { field_index: f.index });
+          } else if (f.state === "ready") {
+            doAction("harvest_field", { field_index: f.index });
+          } else {
+            log("Dit veld is nog niet ready...");
+          }
+        };
+
+        grid.appendChild(div);
+      });
+
+      // Animals
+      const aList = document.getElementById("animal-list");
+      aList.innerHTML = "";
+      if (state.animals.length === 0) {
+        aList.innerHTML = "<li>Geen dieren</li>";
+      } else {
+        state.animals.forEach(a => {
+          const li = document.createElement("li");
+          const rem = Math.ceil(a.time_remaining || 0);
+          li.textContent =
+            a.animal_type + " [" + a.state + "]" +
+            (rem > 0 ? " (" + rem + "s)" : "");
+          const btn = document.createElement("button");
+          btn.textContent = "Voer";
+          btn.onclick = () => doAction("feed_animal", { animal_index: a.index });
+          li.appendChild(btn);
+          aList.appendChild(li);
+        });
+      }
+
+      // Buildings
+      const bList = document.getElementById("building-list");
+      bList.innerHTML = "";
+      if (state.buildings.length === 0) {
+        bList.innerHTML = "<li>Geen gebouwen</li>";
+      } else {
+        state.buildings.forEach(b => {
+          const li = document.createElement("li");
+          const rem = Math.ceil(b.time_remaining || 0);
+          li.textContent =
+            b.building_type +
+            (b.is_producing ? " [PRODUCING]" : " [IDLE]") +
+            (rem > 0 ? " (" + rem + "s)" : "") +
+            " q=" + b.queue_length;
+          const btn = document.createElement("button");
+          btn.textContent = "Start productie";
+          btn.onclick = () => doAction("start_production", { building_index: b.index });
+          li.appendChild(btn);
+          bList.appendChild(li);
+        });
+      }
+
+      // Orders
+      const oList = document.getElementById("order-list");
+      oList.innerHTML = "";
+      if (state.orders.length === 0) {
+        oList.innerHTML = "<li>Geen actieve orders</li>";
+      } else {
+        state.orders.forEach(o => {
+          const li = document.createElement("li");
+          li.textContent =
+            o.order_id +
+            " → " +
+            JSON.stringify(o.required_items) +
+            " (+" + o.reward + " coins)" +
+            (o.expired ? " [EXPIRED]" : "");
+          oList.appendChild(li);
+        });
+      }
+    }
+
+    function fetchState() {
+      fetch("/api/state")
+        .then(r => r.json())
+        .then(state => {
+          lastState = state;
+          renderState(state);
+        })
+        .catch(err => {
+          console.error(err);
+          log("Fout bij ophalen state: " + err);
+        });
+    }
+
+    document.getElementById("btn-harvest-all")
+      .addEventListener("click", () => doAction("harvest_all"));
+
+    // Poll elke seconde
+    fetchState();
+    setInterval(fetchState, 1000);
+  </script>
+</body>
+</html>
+        <h1 style="font-size:18px; margin-bottom:4px;">Big Harvest Farming 🌾</h1>
+        <div style="font-size:12px; opacity:0.8;">Klik op velden om te planten/oogsten.</div>
+      </div>
+  </style>
+</head>
+<body>
+      max-height: 120px;
+      overflow-y: auto;
+    }
+      background: rgba(0,0,0,0.2);
+      padding: 6px;
+      border-radius: 6px;
+    li {
+      margin-bottom: 3px;
+    }
+    .section h3 {
+    ul {
+      list-style: none;
+      letter-spacing: 0.06em;
+      opacity: 0.8;
+    }
+      font-size: 13px;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      transition: transform 0.1s, box-shadow 0.1s, background 0.1s;
+      white-space: pre-line;
+    }
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+    .field {
+      border-radius: 8px;
+      background: #3a523a;
