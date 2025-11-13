@@ -18,6 +18,7 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
 
+        # groene achtergrond
         screen.fill((40, 120, 50))
         pygame.display.flip()
 
@@ -27,4 +28,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
