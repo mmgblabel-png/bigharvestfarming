@@ -491,3 +491,185 @@ class GameSession:
         flow_results["logout"] = self.logout()
         
         return flow_results
+
+
+# ---------------------------------------------------------------------------
+# Simple interactive CLI game loop
+# ---------------------------------------------------------------------------
+
+class Game:
+    """Interactive terminal game wrapper for a single player farm.
+
+    Provides a minimal menu so the repository can be "played" directly
+    in a terminal without needing the separate demo script or web app.
+    """
+
+    def __init__(self):
+        self.session = GameSession("player_cli")
+        self.session.login()
+        # Seed some starter inventory
+        self.session.farm.inventory.update({
+            "wheat_seed": 10,
+            "water": 20,
+        })
+
+    def _auto_tick(self):
+        """Advance timers and auto-collect ready items."""
+        ready = self.session.check_timers()
+        collected = self.session.harvest_and_collect()
+        # Clear harvested fields to allow replanting
+        for i, plant in enumerate(self.session.farm.fields):
+            if plant and plant.state == PlantState.HARVESTED:
+                self.session.farm.fields[i] = None
+        return ready, collected
+
+    def _print_status(self):
+        farm = self.session.farm
+        print("\n=== FARM STATUS ===")
+        print(f"Coins: {farm.coins}")
+        print(f"Inventory: {farm.inventory}")
+        # Fields
+        for i in range(farm.max_fields):
+            plant = farm.fields[i] if i < len(farm.fields) else None
+            if not plant:
+                print(f" Field {i}: [empty]")
+            else:
+                rem = int(plant.time_remaining())
+                print(f" Field {i}: {plant.crop_type} [{plant.state.value}] {rem}s")
+        # Animals
+        if farm.animals:
+            for i, a in enumerate(farm.animals):
+                rem = int(a.time_remaining())
+                print(f" Animal {i}: {a.animal_type} [{a.state.value}] {rem}s")
+        else:
+            print(" Animals: none")
+        # Buildings
+        if farm.buildings:
+            for i, b in enumerate(farm.buildings):
+                rem = int(b.time_remaining())
+                status = "PRODUCING" if b.is_producing else "IDLE"
+                print(f" Building {i}: {b.building_type} [{status}] q={len(b.queue)} {rem}s")
+        else:
+            print(" Buildings: none")
+        # Orders
+        if self.session.market_orders:
+            for o in self.session.market_orders:
+                print(f" Order {o.order_id}: needs {o.required_items} reward={o.reward} expired={o.is_expired()}")
+        else:
+            print(" Orders: none")
+
+    def _help(self):
+        print("""
+Commands:
+  status                 Show farm status
+  plant <field> <crop>    Plant crop (wheat only for now)
+  feed <animal_index>    Feed an animal
+  addanimal <type> <prod> <time> <amount>   Add a new animal
+  addbuilding <type> <input> <amount_in> <out> <amount_out> <time>   Add building
+  startprod <building_index>  Start production in building
+  order <id> <item> <amount> <reward> <expiry_sec>  Create market order
+  harvestall             Harvest and collect all ready items
+  wait <seconds>         Wait (advance timers)
+  help                   Show this help
+  quit                   Exit game
+""")
+
+    def run(self):
+        print("Welcome to Big Harvest Farming (CLI). Type 'help' for commands.")
+        self._print_status()
+        while True:
+            try:
+                raw = input("big-harvest> ").strip()
+            except (EOFError, KeyboardInterrupt):
+                print("\nExiting...")
+                break
+            if not raw:
+                ready, collected = self._auto_tick()
+                continue
+            parts = raw.split()
+            cmd = parts[0].lower()
+            args = parts[1:]
+            if cmd == "quit" or cmd == "exit":
+                break
+            elif cmd == "help":
+                self._help()
+            elif cmd == "status":
+                self._auto_tick()
+                self._print_status()
+            elif cmd == "plant":
+                if len(args) < 2:
+                    print("Usage: plant <field_index> <crop_type>")
+                else:
+                    idx = int(args[0])
+                    crop = args[1]
+                    plant = Plant(crop_type=crop, growth_time=5, yield_amount=3)
+                    ok = self.session.farm.plant_crop(idx, plant)
+                    print("Planted" if ok else "Could not plant")
+            elif cmd == "feed":
+                if not args:
+                    print("Usage: feed <animal_index>")
+                else:
+                    idx = int(args[0])
+                    if 0 <= idx < len(self.session.farm.animals):
+                        self.session.farm.animals[idx].feed()
+                        print("Fed animal")
+                    else:
+                        print("Invalid animal index")
+            elif cmd == "addanimal":
+                if len(args) < 4:
+                    print("Usage: addanimal <type> <product> <prod_time_sec> <amount>")
+                else:
+                    t, prod, sec, amt = args[0], args[1], int(args[2]), int(args[3])
+                    a = Animal(t, prod, sec, amt)
+                    self.session.farm.add_animal(a)
+                    print("Animal added.")
+            elif cmd == "addbuilding":
+                if len(args) < 6:
+                    print("Usage: addbuilding <type> <input_item> <input_amount> <output_item> <output_amount> <prod_time>")
+                else:
+                    btype, in_item, in_amt, out_item, out_amt, ptime = args[0], args[1], int(args[2]), args[3], int(args[4]), int(args[5])
+                    building = ProductionBuilding(btype, {in_item: in_amt}, out_item, out_amt, ptime)
+                    if self.session.farm.add_building(building, cost=0):
+                        print("Building added.")
+            elif cmd == "startprod":
+                if not args:
+                    print("Usage: startprod <building_index>")
+                else:
+                    idx = int(args[0])
+                    if 0 <= idx < len(self.session.farm.buildings):
+                        ok = self.session.farm.buildings[idx].start_production(self.session.farm.inventory)
+                        print("Production started" if ok else "Cannot start production")
+            elif cmd == "order":
+                if len(args) < 5:
+                    print("Usage: order <id> <item> <amount> <reward> <expiry_sec>")
+                else:
+                    oid, item, amount, reward, exp = args[0], args[1], int(args[2]), int(args[3]), int(args[4])
+                    order = MarketOrder(oid, {item: amount}, reward, exp)
+                    self.session.market_orders.append(order)
+                    print("Order created.")
+            elif cmd == "harvestall":
+                collected = self.session.harvest_and_collect()
+                for i, plant in enumerate(self.session.farm.fields):
+                    if plant and plant.state == PlantState.HARVESTED:
+                        self.session.farm.fields[i] = None
+                print(f"Collected: {collected}")
+            elif cmd == "wait":
+                if not args:
+                    print("Usage: wait <seconds>")
+                else:
+                    sec = float(args[0])
+                    import time
+                    end = time.time() + sec
+                    while time.time() < end:
+                        time.sleep(0.2)
+                        self._auto_tick()
+                    print(f"Waited {sec} seconds.")
+            else:
+                print("Unknown command. Type 'help' for list.")
+        logout = self.session.logout()
+        print("Session ended.", logout)
+
+
+def main():
+    Game().run()
+
