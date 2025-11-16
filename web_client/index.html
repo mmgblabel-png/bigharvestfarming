@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Big Harvest Farming (web client)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-root">
+    <header class="hud">
+      <div>💰 Munten: <span id="money">100</span></div>
+      <div>
+        Actie:
+        <button data-action="plant">Planten</button>
+        <button data-action="harvest">Oogsten</button>
+      </div>
+    </header>
+
+    <main class="game">
+      <div id="farm-grid"></div>
+    </main>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
