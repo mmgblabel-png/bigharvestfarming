@@ -197,4 +197,4 @@ def api_action():
 
 if __name__ == "__main__":
     # debug=True voor development; in productie uitzetten
-    app.run(debug=True)
+    app.run()
