@@ -9,42 +9,9 @@
 
 const GRID_WIDTH = 20;
 const GRID_HEIGHT = 20;
+const questListEl = document.getElementById("quest-list");
 
 // --- Gewassen (A) ---
-const CROPS = {
-  wheat: {
-    key: "wheat",
-    name: "Tarwe",
-    emoji: "🌾",
-    growTimeMs: 1000 * 30,
-    seedCost: 10,
-    value: 25,
-    xpPlant: 2,
-    xpHarvest: 5,
-  },
-  corn: {
-    key: "corn",
-    name: "Maïs",
-    emoji: "🌽",
-    growTimeMs: 1000 * 60,
-    seedCost: 20,
-    value: 50,
-    xpPlant: 3,
-    xpHarvest: 8,
-  },
-  carrot: {
-    key: "carrot",
-    name: "Wortel",
-    emoji: "🥕",
-    growTimeMs: 1000 * 45,
-    seedCost: 15,
-    value: 35,
-    xpPlant: 3,
-    xpHarvest: 7,
-  },
-};
-
-// --- Gebouwen + dieren (B + D) ---
 const BUILDINGS = {
   chicken_coop: {
     key: "chicken_coop",
@@ -56,6 +23,7 @@ const BUILDINGS = {
     productName: "Eieren",
     productValue: 40,
     productXp: 10,
+    minLevel: 2,
   },
   cow_barn: {
     key: "cow_barn",
@@ -67,15 +35,59 @@ const BUILDINGS = {
     productName: "Melk",
     productValue: 80,
     productXp: 18,
+    minLevel: 3,
   },
 };
+
 
 // --- Game-state ---
 let state = {
   money: 500,
   xp: 0,
   tiles: [],
+  quests: [], // lijst van actieve quests
 };
+// --- Quests-config ---
+const QUEST_DEFS = [
+  {
+    id: "harvest_10_wheat",
+    title: "Oogst 10 tarwe",
+    type: "harvest_crop",
+    cropType: "wheat",
+    target: 10,
+    rewardMoney: 100,
+    rewardXp: 20,
+  },
+  {
+    id: "build_chicken_coop",
+    title: "Bouw 1 kippenhok",
+    type: "build_building",
+    buildingType: "chicken_coop",
+    target: 1,
+    rewardMoney: 150,
+    rewardXp: 30,
+  },
+  {
+    id: "collect_5_eggs",
+    title: "Verzamel 5x eieren",
+    type: "collect_product",
+    buildingType: "chicken_coop",
+    target: 5,
+    rewardMoney: 200,
+    rewardXp: 40,
+  },
+];
+
+function initQuestsIfNeeded() {
+  if (!Array.isArray(state.quests) || state.quests.length === 0) {
+    state.quests = QUEST_DEFS.map((q) => ({
+      id: q.id,
+      progress: 0,
+      completed: false,
+    }));
+  }
+}
+
 
 function createEmptyTiles() {
   const tiles = [];
@@ -107,6 +119,10 @@ function initState() {
   state.money = 500;
   state.xp = 0;
   state.tiles = createEmptyTiles();
+  state.quests = [];
+  initQuestsIfNeeded();
+}
+
 }
 
 // --- XP & levels (C) ---
@@ -124,8 +140,66 @@ function getLevelInfo(xp) {
 }
 
 function addXp(amount) {
-  state.xp += amount;
+ // --- Quests bijwerken ---
+function updateQuestsOnAction(action, payload) {
+  // zorg dat quests bestaan
+  initQuestsIfNeeded();
+
+  const questMap = {};
+  for (const q of state.quests) {
+    questMap[q.id] = q;
+  }
+
+  const levelInfo = getLevelInfo(state.xp);
+
+  for (const def of QUEST_DEFS) {
+    const q = questMap[def.id];
+    if (!q || q.completed) continue;
+
+    switch (def.type) {
+      case "harvest_crop":
+        if (
+          action === "harvest_crop" &&
+          payload.cropType === def.cropType
+        ) {
+          q.progress += 1;
+        }
+        break;
+
+      case "build_building":
+        if (
+          action === "build_building" &&
+          payload.buildingType === def.buildingType
+        ) {
+          q.progress += 1;
+        }
+        break;
+
+      case "collect_product":
+        if (
+          action === "collect_product" &&
+          payload.buildingType === def.buildingType
+        ) {
+          q.progress += 1;
+        }
+        break;
+
+      default:
+        break;
+    }
+
+    // check of quest klaar is
+    if (!q.completed && q.progress >= def.target) {
+      q.completed = true;
+      state.money += def.rewardMoney;
+      addXp(def.rewardXp);
+      console.log(
+        `Quest voltooid: ${def.title} (+${def.rewardMoney} geld, +${def.rewardXp} XP)`
+      );
+    }
+  }
 }
+
 
 // --- Crop helpers ---
 function getCropConfig(type) {
@@ -166,16 +240,21 @@ function plantCrop(x, y, cropType) {
 }
 
 function harvestCrop(x, y) {
+function harvestCrop(x, y) {
   const tile = state.tiles?.[y]?.[x];
   if (!tile || !tile.crop) return;
 
-  const cfg = getCropConfig(tile.crop.type);
+  const cropType = tile.crop.type;
+  const cfg = getCropConfig(cropType);
   if (!cfg || !cropReady(tile.crop)) return;
 
   state.money += cfg.value;
   addXp(cfg.xpHarvest || 3);
   tile.crop = null;
+
+  updateQuestsOnAction("harvest_crop", { cropType });
 }
+
 
 function buildBuilding(x, y, buildingType) {
   const tile = state.tiles?.[y]?.[x];
@@ -191,19 +270,26 @@ function buildBuilding(x, y, buildingType) {
     nextReadyAt: Date.now() + cfg.productionTimeMs,
   };
   addXp(cfg.buildXp || 10);
+
+  updateQuestsOnAction("build_building", { buildingType });
 }
+
 
 function collectFromBuilding(x, y) {
   const tile = state.tiles?.[y]?.[x];
   if (!tile || !tile.building) return;
 
-  const cfg = getBuildingConfig(tile.building.type);
+  const buildingType = tile.building.type;
+  const cfg = getBuildingConfig(buildingType);
   if (!cfg || !buildingReady(tile.building)) return;
 
   state.money += cfg.productValue;
   addXp(cfg.productXp || 5);
   tile.building.nextReadyAt = Date.now() + cfg.productionTimeMs;
+
+  updateQuestsOnAction("collect_product", { buildingType });
 }
+
 
 // --- UI referenties ---
 let currentAction = "plant";
@@ -237,30 +323,33 @@ function buildCropToolbar() {
 
 function buildBuildingToolbar() {
   buildToolbarEl.querySelectorAll("button").forEach((b) => b.remove());
+  const levelInfo = getLevelInfo(state.xp);
+
   Object.values(BUILDINGS).forEach((cfg) => {
     const btn = document.createElement("button");
-    btn.textContent = `${cfg.emoji} ${cfg.name} (${cfg.buildCost})`;
+    const locked = levelInfo.level < (cfg.minLevel || 1);
+    btn.textContent = locked
+      ? `🔒 ${cfg.name} (level ${cfg.minLevel})`
+      : `${cfg.emoji} ${cfg.name} (${cfg.buildCost})`;
     btn.dataset.buildingType = cfg.key;
-    if (cfg.key === currentBuildingType) btn.classList.add("active");
-    btn.addEventListener("click", () => {
-      currentBuildingType = cfg.key;
-      updateToolbarActiveState();
-    });
+
+    if (cfg.key === currentBuildingType && !locked) {
+      btn.classList.add("active");
+    }
+
+    if (locked) {
+      btn.disabled = true;
+      btn.style.opacity = "0.6";
+    } else {
+      btn.addEventListener("click", () => {
+        currentBuildingType = cfg.key;
+        updateToolbarActiveState();
+      });
+    }
     buildToolbarEl.appendChild(btn);
   });
 }
 
-function updateToolbarActiveState() {
-  cropToolbarEl.querySelectorAll("button").forEach((btn) =>
-    btn.classList.toggle("active", btn.dataset.cropType === currentCropType)
-  );
-  buildToolbarEl.querySelectorAll("button").forEach((btn) =>
-    btn.classList.toggle(
-      "active",
-      btn.dataset.buildingType === currentBuildingType
-    )
-  );
-}
 
 // --- Rendering (grid tekenen) ---
 function renderGrid() {
@@ -330,6 +419,32 @@ function renderGrid() {
     }
   }
 }
+function renderQuests() {
+  questListEl.innerHTML = "";
+  initQuestsIfNeeded();
+
+  for (const def of QUEST_DEFS) {
+    const q = state.quests.find((qq) => qq.id === def.id);
+    if (!q) continue;
+
+    const li = document.createElement("li");
+    li.classList.add("quest-item");
+    if (q.completed) li.classList.add("completed");
+
+    const title = document.createElement("div");
+    title.classList.add("quest-title");
+    title.textContent = def.title;
+
+    const progress = document.createElement("div");
+    progress.classList.add("quest-progress");
+    const capped = Math.min(q.progress, def.target);
+    progress.textContent = `${capped}/${def.target}  •  +${def.rewardMoney}💰  +${def.rewardXp}XP`;
+
+    li.appendChild(title);
+    li.appendChild(progress);
+    questListEl.appendChild(li);
+  }
+}
 
 function updateUI() {
   const info = getLevelInfo(state.xp);
@@ -338,6 +453,9 @@ function updateUI() {
   xpEl.textContent = info.currentXp;
   xpNextEl.textContent = info.xpToNext;
   renderGrid();
+  renderQuests();
+}
+
 }
 
 // --- Action buttons ---
@@ -389,10 +507,10 @@ async function saveStateToServer() {
   }
 }
 
-// --- Game start ---
 async function startGame() {
   await loadStateFromServer();
   ensureTiles();
+  initQuestsIfNeeded();
   buildCropToolbar();
   buildBuildingToolbar();
   updateToolbarActiveState();
@@ -400,4 +518,3 @@ async function startGame() {
   setInterval(updateUI, 1000);
 }
 
-startGame();

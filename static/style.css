@@ -54,77 +54,60 @@ body {
   border-color: #0077ff;
 }
 
+/* Layout: veld + zijpaneel */
+.game-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 12px;
+  align-items: flex-start;
+}
+
 /* Speelveld */
 .game {
-  background: #5bbf4a;
-  padding: 12px;
+  .side-panel {
+  background: #ffffffdd;
+  padding: 10px 12px;
   border-radius: 12px;
-}
-
-/* Scrollbaar gebied rond de boerderij */
-.farm-scroll {
-  width: 100%;
+  min-height: 200px;
   max-height: 480px;
-  overflow: auto;
-  border-radius: 12px;
+  overflow-y: auto;
+  box-shadow: 0 2px 4px #0003;
 }
 
-/* Groot grid (20x20) */
-#farm-grid {
-  display: grid;
-  grid-template-columns: repeat(20, 40px);
-  grid-template-rows: repeat(20, 40px);
-  gap: 3px;
-  padding: 6px;
-}
-
-/* Tiles */
-.tile {
-  width: 40px;
-  height: 40px;
-  background: #3d7c31;
-  border-radius: 6px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  user-select: none;
-  box-shadow: 0 1px 2px #0004;
-}
-
-/* lege grond */
-.tile.empty {
-  background: #4a8f3b;
-}
-
-/* planten */
-.tile.crop-growing {
-  background: #c4a35a;
-}
-
-.tile.crop-ready {
-  background: #f7d46a;
-}
-
-/* gebouwen */
-.tile.building {
-  background: #4f6cbf;
-}
-
-.tile.building-ready {
-  background: #ffd45c;
-}
-
-/* labeltje in tile */
-.tile-label {
-  position: relative;
+.side-panel h2 {
+  margin: 0 0 8px;
   font-size: 16px;
 }
 
-.tile-label span.small {
-  position: absolute;
-  bottom: -2px;
-  right: -2px;
-  font-size: 10px;
+#quest-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+}
+
+.quest-item {
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #f3f3f3;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+}
+
+.quest-item.completed {
+  background: #c9f7c9;
+  text-decoration: line-through;
+  opacity: 0.8;
+}
+
+.quest-title {
+  font-weight: 600;
+}
+
+.quest-progress {
+  font-size: 12px;
+  opacity: 0.8;
 }
