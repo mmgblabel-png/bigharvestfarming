@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Big Harvest Farming</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-root">
+    <header class="hud">
+      <div class="hud-left">
+        <div>💰 Munten: <span id="money">500</span></div>
+        <div>⭐ Level: <span id="level">1</span></div>
+        <div>XP: <span id="xp">0</span> / <span id="xp-next">100</span></div>
+      </div>
+
+      <div class="hud-right">
+        Actie:
+        <button data-action="plant" class="active">Planten</button>
+        <button data-action="harvest">Oogsten</button>
+        <button data-action="build">Bouwen</button>
+        <button data-action="collect">Verzamelen</button>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <div id="crop-toolbar">
+        <strong>Gewas:</strong>
+        <!-- knoppen worden met JS gevuld -->
+      </div>
+      <div id="build-toolbar">
+        <strong>Gebouw:</strong>
+        <!-- knoppen worden met JS gevuld -->
+      </div>
+    </section>
+
+        <main class="game-layout">
+      <section class="game">
+        <div class="farm-scroll">
+          <div id="farm-grid"></div>
+        </div>
+      </section>
+
+      <aside class="side-panel">
+        <h2>Missies</h2>
+        <ul id="quest-list">
+          <!-- quests worden door JS gevuld -->
+        </ul>
+      </aside>
+    </main>
+
