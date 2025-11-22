@@ -1,0 +1,274 @@
+/* Algemene layout */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+body {
+  background: #e2f3da;
+  color: #234018;
+}
+
+/* HUD */
+
+#hud {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  background: linear-gradient(to right, #3e7a28, #5ca238);
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hud-left,
+.hud-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.hud-item {
+  font-size: 14px;
+}
+
+.xp-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.xp-label {
+  font-size: 12px;
+}
+
+.xp-bar-outer {
+  width: 180px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.xp-bar-inner {
+  height: 100%;
+  width: 0%;
+  background: #ffd54f;
+  transition: width 0.2s linear;
+}
+
+/* Toolbar */
+
+#toolbar {
+  display: flex;
+  gap: 16px;
+  padding: 8px 16px;
+  background: #f0f7e8;
+  border-bottom: 1px solid #c4d6b1;
+}
+
+.toolbar-section {
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  min-width: 220px;
+}
+
+.toolbar-section h2 {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.toolbar-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  background: #e3f2d1;
+  transition: transform 0.05s ease, box-shadow 0.05s ease, background 0.1s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+button.action-selected,
+button.crop-selected,
+button.building-selected {
+  background: #ffeb3b;
+}
+
+/* Locked items */
+
+button.locked {
+  background: #ddd;
+  color: #777;
+  cursor: not-allowed;
+}
+
+button.locked::after {
+  content: " 🔒";
+}
+
+/* Hoofdcontent */
+
+#main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 12px 16px 16px;
+  gap: 16px;
+}
+
+/* Farm grid */
+
+#farm-wrapper {
+  flex: 1;
+  overflow: auto;
+  max-height: calc(100vh - 150px);
+  background: #cde7b0;
+  border-radius: 12px;
+  border: 1px solid #aecd8f;
+  padding: 10px;
+}
+
+#farm-grid {
+  display: grid;
+  grid-template-columns: repeat(20, 32px);
+  grid-template-rows: repeat(20, 32px);
+  gap: 2px;
+}
+
+.tile {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #9ccc65;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Tile states */
+
+.tile-empty {
+  background: #aed581;
+}
+
+.tile-crop-growing {
+  background: #8bc34a;
+}
+
+.tile-crop-ready {
+  background: #ffeb3b;
+}
+
+.tile-building {
+  background: #8d6e63;
+}
+
+/* Kleine indicator (bv. product ready) */
+
+.tile-indicator {
+  position: absolute;
+  bottom: 1px;
+  right: 2px;
+  font-size: 12px;
+}
+
+/* Quest panel */
+
+#quest-panel {
+  width: 260px;
+  max-height: calc(100vh - 150px);
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #c4d6b1;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#quest-panel h2 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+#quest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+.quest-card {
+  border-radius: 8px;
+  padding: 6px 8px;
+  background: #f6fbe9;
+  border: 1px solid #d3e6b4;
+  font-size: 12px;
+}
+
+.quest-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.quest-progress {
+  font-size: 11px;
+}
+
+.quest-reward {
+  font-size: 11px;
+  margin-top: 4px;
+  color: #4e7c2a;
+}
+
+.quest-completed {
+  background: #e0ffe3;
+  border-color: #7cb342;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  #main {
+    flex-direction: column;
+  }
+
+  #quest-panel {
+    width: 100%;
+    order: -1;
+  }
+
+  #farm-wrapper {
+    max-height: 400px;
+  }
+
+  #farm-grid {
+    transform: scale(0.9);
+    transform-origin: top left;
+  }
+}

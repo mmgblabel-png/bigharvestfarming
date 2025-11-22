@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Big Harvest Farming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div id="hud">
+    <div class="hud-left">
+      <div class="hud-item">
+        💰 Munten: <span id="hud-money">0</span>
+      </div>
+      <div class="hud-item">
+        ⭐ Level: <span id="hud-level">1</span>
+      </div>
+      <div class="hud-item xp-bar">
+        <div class="xp-label">
+          XP: <span id="hud-xp">0</span>/<span id="hud-xp-next">100</span>
+        </div>
+        <div class="xp-bar-outer">
+          <div class="xp-bar-inner" id="hud-xp-bar"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hud-right">
+      <div class="hud-item">
+        Actie:
+        <span id="hud-action-label">Geen</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="toolbar">
+    <div class="toolbar-section">
+      <h2>Gewassen</h2>
+      <div class="toolbar-buttons" id="crop-buttons">
+        <!-- Wordt gevuld door game.js -->
+      </div>
+    </div>
+    <div class="toolbar-section">
+      <h2>Gebouwen</h2>
+      <div class="toolbar-buttons" id="building-buttons">
+        <!-- Wordt gevuld door game.js -->
+      </div>
+    </div>
+    <div class="toolbar-section">
+      <h2>Acties</h2>
+      <div class="toolbar-buttons">
+        <button class="action-btn" data-action="harvest">
+          🌾 Oogsten
+        </button>
+        <button class="action-btn" data-action="collect">
+          📦 Verzamelen
+        </button>
+        <button class="action-btn" data-action="none">
+          ❌ Annuleren
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="main">
+    <div id="farm-wrapper">
+      <div id="farm-grid">
+        <!-- Tegels worden door game.js gemaakt -->
+      </div>
+    </div>
+    <aside id="quest-panel">
+      <h2>Missies</h2>
+      <div id="quest-list">
+        <!-- Missies worden door game.js gerenderd -->
+      </div>
+    </aside>
+  </div>
+
+  <script src="/static/game.js" defer></script>
+</body>
+</html>
