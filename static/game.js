@@ -242,7 +242,6 @@ function plantCrop(x, y, cropType) {
 }
 
 function harvestCrop(x, y) {
-function harvestCrop(x, y) {
   const tile = state.tiles?.[y]?.[x];
   if (!tile || !tile.crop) return;
 
