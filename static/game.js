@@ -11,7 +11,7 @@ const GRID_WIDTH = 20;
 const GRID_HEIGHT = 20;
 const questListEl = document.getElementById("quest-list");
 
-// --- Gewassen (A) ---
+// --- Gebouwen (B) ---
 const BUILDINGS = {
   chicken_coop: {
     key: "chicken_coop",
