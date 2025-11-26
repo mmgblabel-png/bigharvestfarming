@@ -140,6 +140,8 @@ function getLevelInfo(xp) {
 }
 
 function addXp(amount) {
+  state.xp += amount;
+}
  // --- Quests bijwerken ---
 function updateQuestsOnAction(action, payload) {
   // zorg dat quests bestaan
