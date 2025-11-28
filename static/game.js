@@ -1,6 +1,8 @@
 // ======= CONFIG =======
 
 const GRID_SIZE = 20;
+const RENDER_INTERVAL_MS = 500;
+const GRID_RENDER_THROTTLE_MS = 1000;
 
 const CROPS = {
   wheat: {
@@ -8,77 +10,84 @@ const CROPS = {
     name: "Tarwe",
     emoji: "🌾",
     growTimeMs: 30_000, // 30 seconden
-    seedCost: 10,
-    value: 20,
-    xpPlant: 2,
-    xpHarvest: 5,
-    minLevel: 1
+    seedCost: 12,
+    value: 24,
+    xpPlant: 3,
+    xpHarvest: 6,
+    minLevel: 1,
+    seasons: ["Lente","Zomer","Herfst"]
   },
   corn: {
     id: "corn",
     name: "Maïs",
     emoji: "🌽",
     growTimeMs: 60_000, // 1 min
-    seedCost: 25,
-    value: 55,
-    xpPlant: 4,
-    xpHarvest: 10,
-    minLevel: 2
+    seedCost: 28,
+    value: 65,
+    xpPlant: 5,
+    xpHarvest: 12,
+    minLevel: 2,
+    seasons: ["Zomer"]
   },
   carrot: {
     id: "carrot",
     name: "Wortel",
     emoji: "🥕",
     growTimeMs: 90_000, // 1.5 min
-    seedCost: 40,
-    value: 90,
-    xpPlant: 6,
-    xpHarvest: 16,
-    minLevel: 3
+    seedCost: 44,
+    value: 110,
+    xpPlant: 7,
+    xpHarvest: 18,
+    minLevel: 3,
+    seasons: ["Lente","Herfst"]
   },
   potato: {
     id: "potato",
     name: "Aardappel",
     emoji: "🥔",
     growTimeMs: 120_000,
-    seedCost: 60,
-    value: 140,
-    xpPlant: 8,
-    xpHarvest: 22,
-    minLevel: 4
+    seedCost: 66,
+    value: 165,
+    xpPlant: 9,
+    xpHarvest: 24,
+    minLevel: 4,
+    seasons: ["Lente","Herfst"]
   },
   tomato: {
     id: "tomato",
     name: "Tomaat",
     emoji: "🍅",
     growTimeMs: 150_000,
-    seedCost: 80,
-    value: 190,
-    xpPlant: 10,
-    xpHarvest: 28,
-    minLevel: 5
+    seedCost: 88,
+    value: 230,
+    xpPlant: 11,
+    xpHarvest: 32,
+    minLevel: 5,
+    seasons: ["Zomer"]
   },
   pumpkin: {
     id: "pumpkin",
     name: "Pompoen",
     emoji: "🎃",
     growTimeMs: 210_000,
-    seedCost: 120,
-    value: 300,
-    xpPlant: 14,
-    xpHarvest: 40,
-    minLevel: 6
+    seedCost: 132,
+    value: 380,
+    xpPlant: 16,
+    xpHarvest: 46,
+    minLevel: 6,
+    seasons: ["Herfst"]
   },
   sunflower: {
     id: "sunflower",
     name: "Zonnebloem",
     emoji: "🌻",
     growTimeMs: 240_000,
-    seedCost: 140,
-    value: 360,
-    xpPlant: 16,
-    xpHarvest: 46,
-    minLevel: 7
+    seedCost: 155,
+    value: 460,
+    xpPlant: 18,
+    xpHarvest: 54,
+    minLevel: 7,
+    seasons: ["Zomer"]
   }
 };
 
@@ -91,7 +100,7 @@ const BUILDINGS = {
     buildXp: 15,
     productionTimeMs: 60_000,
     productName: "Eieren",
-    productValue: 60,
+    productValue: 70,
     productXp: 10,
     minLevel: 2
   },
@@ -103,7 +112,7 @@ const BUILDINGS = {
     buildXp: 30,
     productionTimeMs: 120_000,
     productName: "Melk",
-    productValue: 140,
+    productValue: 165,
     productXp: 20,
     minLevel: 3
   },
@@ -115,7 +124,7 @@ const BUILDINGS = {
     buildXp: 20,
     productionTimeMs: 180_000,
     productName: "Graanpakket",
-    productValue: 120,
+    productValue: 140,
     productXp: 16,
     minLevel: 3
   },
@@ -127,9 +136,10 @@ const BUILDINGS = {
     buildXp: 40,
     productionTimeMs: 240_000,
     productName: "Meel",
-    productValue: 220,
+    productValue: 260,
     productXp: 28,
-    minLevel: 4
+    minLevel: 4,
+    requires: { wheat: 2 } // needs 2 wheat per production cycle
   },
   water_well: {
     id: "water_well",
@@ -139,7 +149,7 @@ const BUILDINGS = {
     buildXp: 10,
     productionTimeMs: 45_000,
     productName: "Water",
-    productValue: 30,
+    productValue: 34,
     productXp: 6,
     minLevel: 1
   },
@@ -151,7 +161,7 @@ const BUILDINGS = {
     buildXp: 35,
     productionTimeMs: 180_000,
     productName: "Maaltijd",
-    productValue: 180,
+    productValue: 210,
     productXp: 24,
     minLevel: 4
   },
@@ -163,11 +173,61 @@ const BUILDINGS = {
     buildXp: 18,
     productionTimeMs: 150_000,
     productName: "Toolkit",
-    productValue: 100,
+    productValue: 120,
     productXp: 14,
     minLevel: 2
   }
 };
+
+// ======= UTILITY HELPERS =======
+/**
+ * Iterate over every tile in the grid.
+ * @param {(tile:Object,x:number,y:number)=>void} cb Callback with tile and coords.
+ */
+function forEachTile(cb) {
+  for (let y = 0; y < GRID_SIZE; y++) {
+    for (let x = 0; x < GRID_SIZE; x++) {
+      cb(state.tiles[y][x], x, y);
+    }
+  }
+}
+
+/**
+ * Format numbers for UI with locale thousands grouping.
+ * @param {number} n
+ * @returns {string}
+ */
+function fmt(n) {
+  try { return n.toLocaleString('nl-NL'); } catch { return String(n); }
+}
+
+/**
+ * Determine if the crop on a tile is fully grown.
+ * @param {Object} tile Tile state object.
+ * @param {number} now Timestamp reference.
+ * @returns {boolean}
+ */
+function tileCropReady(tile, now) {
+  if (!tile.crop) return false;
+  const crop = CROPS[tile.crop];
+  if (!crop) return false;
+  const plantedAt = tile.cropPlantedAt || now;
+  return (now - plantedAt) >= getEffectiveCropGrowMs(crop.id);
+}
+
+/**
+ * Determine if the building on a tile has a product ready.
+ * @param {Object} tile Tile state object.
+ * @param {number} now Timestamp reference.
+ * @returns {boolean}
+ */
+function tileBuildingReady(tile, now) {
+  if (!tile.building) return false;
+  const b = BUILDINGS[tile.building];
+  if (!b) return false;
+  const last = tile.lastProductCollectedAt || tile.buildingStartedAt || now - getEffectiveBuildingProductionMs(b.id);
+  return (now - last) >= getEffectiveBuildingProductionMs(b.id);
+}
 
 // Eenvoudige quest-definities
 const QUEST_DEFS = [
@@ -206,12 +266,40 @@ const QUEST_DEFS = [
     target: 5,
     rewardMoney: 250,
     rewardXp: 100
+  },
+  {
+    id: "harvest_corn_5",
+    title: "Oogst 5x maïs",
+    type: "harvest_crop",
+    cropId: "corn",
+    target: 5,
+    rewardMoney: 220,
+    rewardXp: 120
+  },
+  {
+    id: "build_windmill_1",
+    title: "Bouw 1 windmolen",
+    type: "build_building",
+    buildingId: "windmill",
+    target: 1,
+    rewardMoney: 400,
+    rewardXp: 160
+  },
+  {
+    id: "collect_milk_5",
+    title: "Verzamel 5x melk",
+    type: "collect_product",
+    buildingId: "cow_barn",
+    target: 5,
+    rewardMoney: 300,
+    rewardXp: 140
   }
 ];
 
 // ======= GAME STATE =======
 
 let state = null;
+let currentProfile = localStorage.getItem("bhf_profile") || "default";
 
 let currentAction = "none"; // "plant", "build", "harvest", "collect", "plow", "water", "none"
 let selectedCropId = null;
@@ -221,11 +309,14 @@ let selectedBuildingId = null;
 let farmGridEl;
 let questListEl;
 let inventoryListEl;
+let statsListEl;
 let hudMoneyEl;
 let hudLevelEl;
 let hudXpEl;
 let hudXpNextEl;
 let hudXpBarEl;
+let hudMarketTrendEl;
+let hudMarketSparkEl;
 let hudActionLabelEl;
 let cropButtonsContainer;
 let buildingButtonsContainer;
@@ -233,6 +324,14 @@ let hudEnergyEl, hudEnergyMaxEl, hudEnergyBarEl;
 let hudStorageUsedEl, hudStorageCapEl;
 let timeOverlayEl, weatherOverlayEl;
 let hudSeasonEl, hudWeatherEl;
+let profileInputEl, profileApplyEl;
+let lastFxRect = null;
+let prevLevel = 1; // track previous level for level-up bloom
+let lastGridRenderTs = 0; // throttle grid rendering
+// Undo stack (client-only)
+let undoStack = [];
+// Market sparkline history
+let marketTrendHistory = [];
 
 // ======= INIT =======
 
@@ -244,6 +343,7 @@ window.addEventListener("DOMContentLoaded", () => {
   setupSystemButtons();
   setupShortcuts();
   setupAudio();
+  setupProfileUi();
   loadStateFromServer();
 
   // Periodieke render-timer
@@ -251,7 +351,14 @@ window.addEventListener("DOMContentLoaded", () => {
     if (state) {
       renderAll();
     }
-  }, 500);
+  }, RENDER_INTERVAL_MS);
+
+  // Ensure pending save is flushed when leaving the page
+  window.addEventListener('beforeunload', () => {
+    if (saveTimeout) {
+      try { saveStateToServer(); } catch {}
+    }
+  });
 });
 
 // ======= DOM helpers =======
@@ -260,11 +367,14 @@ function cacheDom() {
   farmGridEl = document.getElementById("farm-grid");
   questListEl = document.getElementById("quest-list");
   inventoryListEl = document.getElementById("inventory-list");
+  statsListEl = document.getElementById("stats-list");
   hudMoneyEl = document.getElementById("hud-money");
   hudLevelEl = document.getElementById("hud-level");
   hudXpEl = document.getElementById("hud-xp");
   hudXpNextEl = document.getElementById("hud-xp-next");
   hudXpBarEl = document.getElementById("hud-xp-bar");
+  hudMarketTrendEl = document.getElementById("hud-market-trend");
+  hudMarketSparkEl = document.getElementById("hud-market-spark");
   hudActionLabelEl = document.getElementById("hud-action-label");
   cropButtonsContainer = document.getElementById("crop-buttons");
   buildingButtonsContainer = document.getElementById("building-buttons");
@@ -277,6 +387,21 @@ function cacheDom() {
   weatherOverlayEl = document.getElementById("weather-overlay");
   hudSeasonEl = document.getElementById("hud-season");
   hudWeatherEl = document.getElementById("hud-weather");
+  profileInputEl = document.getElementById("profile-input");
+  profileApplyEl = document.getElementById("profile-apply");
+}
+
+function setupProfileUi() {
+  if (profileInputEl) profileInputEl.value = currentProfile || "default";
+  if (profileApplyEl) {
+    profileApplyEl.addEventListener("click", () => {
+      const val = (profileInputEl && profileInputEl.value.trim()) || "default";
+      currentProfile = val || "default";
+      try { localStorage.setItem("bhf_profile", currentProfile); } catch {}
+      loadStateFromServer();
+      showToast(`Profiel geladen: ${currentProfile}`);
+    });
+  }
 }
 
 function setupToolbarButtons() {
@@ -287,7 +412,8 @@ function setupToolbarButtons() {
     btn.textContent = `${crop.emoji} ${crop.name} (-${crop.seedCost})`;
     btn.dataset.cropId = crop.id;
     btn.classList.add("crop-btn");
-    btn.title = `Kost: ${crop.seedCost} | Waarde: ${crop.value} | Level ${crop.minLevel}+`;
+    const seasonsText = crop.seasons ? ` | Seizoen: ${crop.seasons.join("/")}` : "";
+    btn.title = `Kost: ${crop.seedCost} | Waarde: ${crop.value} | Level ${crop.minLevel}+${seasonsText}`;
     btn.addEventListener("click", () => {
       if (btn.classList.contains("locked")) return;
       selectedCropId = crop.id;
@@ -345,7 +471,7 @@ function setupSystemButtons() {
       const ok = window.confirm("Weet je zeker dat je het spel wilt resetten? Dit kan niet ongedaan worden gemaakt.");
       if (!ok) return;
       try {
-        await api("/api/reset", { method: "POST" });
+        await api(`/api/reset?profile=${encodeURIComponent(currentProfile)}`, { method: "POST" });
         await loadStateFromServer();
         showToast("Spel gereset.");
       } catch (e) {
@@ -357,6 +483,7 @@ function setupSystemButtons() {
   const sellBtn = document.getElementById("btn-sell-products");
   if (sellBtn) {
     sellBtn.addEventListener("click", () => {
+      pushUndo("sell-all");
       if (!state || !state.inventory) return;
       const prices = getSellPriceMap();
       let total = 0;
@@ -377,7 +504,10 @@ function setupSystemButtons() {
         return;
       }
       state.money += total;
+      if (state.stats) state.stats.moneyEarned = (state.stats.moneyEarned || 0) + total;
       showToast(`Verkocht (${soldCount}) voor ${total} 💰`);
+      spawnFloatingText(`+${total} 💰`, "#ffeb3b");
+      microShake();
       renderAll();
       scheduleSaveState();
     });
@@ -386,6 +516,7 @@ function setupSystemButtons() {
   const repairBtn = document.getElementById("btn-repair");
   if (repairBtn) {
     repairBtn.addEventListener("click", () => {
+      pushUndo("repair");
       if (!state) return;
       // Prefer toolkit; fallback to coins
       if ((state.inventory.toolkit || 0) > 0) {
@@ -411,9 +542,11 @@ function setupSystemButtons() {
   const harvestAllBtn = document.getElementById("btn-harvest-all");
   if (harvestAllBtn) {
     harvestAllBtn.addEventListener("click", () => {
+      pushUndo("harvest-all");
       const count = harvestAllReady();
       if (count === 0) return showToast("Geen rijpe gewassen");
       showToast(`Geoogst: ${count}`);
+      microShake();
       renderAll();
       scheduleSaveState();
     });
@@ -421,9 +554,11 @@ function setupSystemButtons() {
   const collectAllBtn = document.getElementById("btn-collect-all");
   if (collectAllBtn) {
     collectAllBtn.addEventListener("click", () => {
+      pushUndo("collect-all");
       const count = collectAllReady();
       if (count === 0) return showToast("Niets om te verzamelen");
       showToast(`Verzameld: ${count}`);
+      microShake();
       renderAll();
       scheduleSaveState();
     });
@@ -435,6 +570,139 @@ function setupSystemButtons() {
       openShop();
     });
   }
+
+  const helpBtn = document.getElementById("btn-open-help");
+  if (helpBtn) {
+    helpBtn.addEventListener("click", () => {
+      openHelp();
+    });
+  }
+
+  const eatBtn = document.getElementById("btn-eat-meal");
+  if (eatBtn) {
+    eatBtn.addEventListener("click", () => {
+      pushUndo("eat-meal");
+      if (!state) return;
+      const have = state.inventory.meal || 0;
+      if (have <= 0) {
+        showToast("Geen maaltijd in inventaris");
+        return;
+      }
+      state.inventory.meal = have - 1;
+      const before = state.energy;
+      state.energy = Math.min(state.maxEnergy, state.energy + 40);
+      addXp(5);
+      const gained = Math.round(state.energy - before);
+      showToast(`Energie hersteld (+${gained})`);
+      spawnFloatingText(`+${gained} ⚡  +5 XP`, "#a5d6a7");
+      renderAll();
+      scheduleSaveState();
+    });
+  }
+
+  // Undo button
+  const undoBtn = document.getElementById('btn-undo');
+  if (undoBtn) {
+    undoBtn.addEventListener('click', () => undoLast());
+  }
+
+  // Auto toggles
+  let autoHarvestEnabled = false;
+  let autoCollectEnabled = false;
+  try {
+    autoHarvestEnabled = localStorage.getItem("bhf_auto_harvest") === "1";
+    autoCollectEnabled = localStorage.getItem("bhf_auto_collect") === "1";
+  } catch {}
+  const autoHarvestBtn = document.getElementById("btn-auto-harvest");
+  const autoCollectBtn = document.getElementById("btn-auto-collect");
+  function updateAutoBtns() {
+    if (autoHarvestBtn) autoHarvestBtn.textContent = `🤖 Auto Oogst: ${autoHarvestEnabled ? 'Aan' : 'Uit'}`;
+    if (autoCollectBtn) autoCollectBtn.textContent = `🤖 Auto Verzamelen: ${autoCollectEnabled ? 'Aan' : 'Uit'}`;
+  }
+  updateAutoBtns();
+  if (autoHarvestBtn) {
+    autoHarvestBtn.addEventListener("click", () => {
+      autoHarvestEnabled = !autoHarvestEnabled;
+      try { localStorage.setItem("bhf_auto_harvest", autoHarvestEnabled ? "1" : "0"); } catch {}
+      updateAutoBtns();
+    });
+  }
+  if (autoCollectBtn) {
+    autoCollectBtn.addEventListener("click", () => {
+      autoCollectEnabled = !autoCollectEnabled;
+      try { localStorage.setItem("bhf_auto_collect", autoCollectEnabled ? "1" : "0"); } catch {}
+      updateAutoBtns();
+    });
+  }
+
+  // Expose for autoActions
+  window.__bhf_autoHarvestEnabled = () => autoHarvestEnabled;
+  window.__bhf_autoCollectEnabled = () => autoCollectEnabled;
+
+  // Reduced motion accessibility toggle
+  let reducedMotion = false;
+  try { reducedMotion = localStorage.getItem('bhf_reduced_motion') === '1'; } catch {}
+  const reducedBtn = document.getElementById('btn-reduced-motion');
+  function applyReducedMotion() {
+    document.body.classList.toggle('reduced-motion', reducedMotion);
+    if (reducedBtn) reducedBtn.textContent = `🌀 Animaties: ${reducedMotion ? 'Uit' : 'Aan'}`;
+  }
+  applyReducedMotion();
+  if (reducedBtn) {
+    reducedBtn.addEventListener('click', () => {
+      reducedMotion = !reducedMotion;
+      try { localStorage.setItem('bhf_reduced_motion', reducedMotion ? '1' : '0'); } catch {}
+      applyReducedMotion();
+    });
+  }
+  window.__bhf_reducedMotion = () => reducedMotion;
+  // High contrast toggle
+  let highContrast = false;
+  try { highContrast = localStorage.getItem('bhf_high_contrast') === '1'; } catch {}
+  const contrastBtn = document.getElementById('btn-high-contrast');
+  function applyContrast() {
+    document.body.classList.toggle('high-contrast', highContrast);
+    if (contrastBtn) contrastBtn.textContent = `🌓 Contrast: ${highContrast ? 'Aan' : 'Uit'}`;
+  }
+  applyContrast();
+  if (contrastBtn) {
+    contrastBtn.addEventListener('click', () => {
+      highContrast = !highContrast;
+      try { localStorage.setItem('bhf_high_contrast', highContrast ? '1' : '0'); } catch {}
+      applyContrast();
+    });
+  }
+  window.__bhf_highContrast = () => highContrast;
+
+  // Coordinates overlay toggle (persisted in state.settings)
+  const coordsBtn = document.getElementById('btn-toggle-coords');
+  function updateCoordsBtn() {
+    if (!coordsBtn) return;
+    const on = !!(state && state.settings && state.settings.showCoords);
+    coordsBtn.textContent = `📐 Coords: ${on ? 'Aan' : 'Uit'}`;
+  }
+  if (coordsBtn) {
+    coordsBtn.addEventListener('click', () => {
+      if (!state) return;
+      if (!state.settings) state.settings = {};
+      state.settings.showCoords = !state.settings.showCoords;
+      try { localStorage.setItem('bhf_show_coords', state.settings.showCoords ? '1' : '0'); } catch {}
+      // First-time tip when enabling
+      if (state.settings.showCoords) {
+        try {
+          const tipSeen = localStorage.getItem('bhf_tip_coords_shown') === '1';
+          if (!tipSeen) {
+            showToast('Coördinaten zichtbaar. Gebruik pijltjestoetsen om tegels te navigeren.');
+            localStorage.setItem('bhf_tip_coords_shown', '1');
+          }
+        } catch {}
+      }
+      updateCoordsBtn();
+      renderAll();
+      scheduleSaveState();
+    });
+  }
+  window.__bhf_updateCoordsBtn = updateCoordsBtn;
 }
 
 function createGrid() {
@@ -443,9 +711,26 @@ function createGrid() {
     for (let x = 0; x < GRID_SIZE; x++) {
       const tileEl = document.createElement("div");
       tileEl.classList.add("tile", "tile-empty");
+      tileEl.tabIndex = 0; // keyboard focusable
       tileEl.dataset.x = x;
       tileEl.dataset.y = y;
       tileEl.addEventListener("click", () => onTileClick(x, y));
+      tileEl.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onTileClick(x, y);
+        }
+        let nx = x, ny = y;
+        if (e.key === 'ArrowRight') nx = Math.min(GRID_SIZE - 1, x + 1);
+        else if (e.key === 'ArrowLeft') nx = Math.max(0, x - 1);
+        else if (e.key === 'ArrowDown') ny = Math.min(GRID_SIZE - 1, y + 1);
+        else if (e.key === 'ArrowUp') ny = Math.max(0, y - 1);
+        if (nx !== x || ny !== y) {
+          const idx = ny * GRID_SIZE + nx;
+          const nextEl = farmGridEl.children[idx];
+          if (nextEl && nextEl.focus) nextEl.focus();
+        }
+      });
       farmGridEl.appendChild(tileEl);
     }
   }
@@ -468,10 +753,12 @@ function ensureStateShape(s) {
           building: null,
           buildingStartedAt: null,
           lastProductCollectedAt: null,
-          plowed: false
+          plowed: false,
+          fertilizedBonus: false
         };
       }
       if (typeof s.tiles[y][x].plowed !== "boolean") s.tiles[y][x].plowed = false;
+      if (typeof s.tiles[y][x].fertilizedBonus !== "boolean") s.tiles[y][x].fertilizedBonus = false;
     }
   }
 
@@ -530,20 +817,40 @@ function ensureStateShape(s) {
   if (typeof s.lastSeasonTs !== "number") s.lastSeasonTs = Date.now();
   if (typeof s.lastWeatherTs !== "number") s.lastWeatherTs = Date.now();
 
+  // Stats tracking
+  if (!s.stats || typeof s.stats !== "object") s.stats = {};
+  const zero = (k) => { if (typeof s.stats[k] !== "number") s.stats[k] = 0; };
+  [
+    "cropsPlanted",
+    "cropsHarvested",
+    "productsCollected",
+    "buildingsConstructed",
+    "productsProcessed",
+    "moneyEarned"
+  ].forEach(zero);
+
+  // Versioning and idle tracking
+  if (typeof s.version !== "number") s.version = 1;
+  if (typeof s.lastActiveTs !== "number") s.lastActiveTs = Date.now();
+
+  // UI Settings
+  if (!s.settings || typeof s.settings !== "object") s.settings = {};
+  if (typeof s.settings.showCoords !== "boolean") s.settings.showCoords = false;
+
   return s;
 }
 
 function getLevelInfo(xp) {
+  // Piecewise-smooth progression: gentle early, steeper mid-game
   let level = 1;
   let currentLevelXp = 0;
-  let nextLevelXp = 100; // level 2 rond 100 XP
-
+  let nextLevelXp = 120; // base for level 2
   while (xp >= nextLevelXp) {
     level++;
     currentLevelXp = nextLevelXp;
-    nextLevelXp = Math.round(nextLevelXp * 1.3);
+    const mul = level < 6 ? 1.22 : level < 12 ? 1.26 : 1.32;
+    nextLevelXp = Math.round(nextLevelXp * mul + 10);
   }
-
   return { level, currentLevelXp, nextLevelXp };
 }
 
@@ -567,8 +874,18 @@ function canUseBuilding(buildingId) {
 
 async function loadStateFromServer() {
   try {
-    const data = await api("/api/state");
+    const data = await api(`/api/state?profile=${encodeURIComponent(currentProfile)}`);
     state = ensureStateShape(data);
+    // Prefer local UI preference for coords if present
+    try {
+      const lc = localStorage.getItem('bhf_show_coords');
+      if (lc === '1' || lc === '0') {
+        if (!state.settings) state.settings = {};
+        state.settings.showCoords = (lc === '1');
+      }
+    } catch {}
+    applyIdleEarnings();
+    try { if (window.__bhf_updateCoordsBtn) window.__bhf_updateCoordsBtn(); } catch {}
     renderAll();
   } catch (err) {
     console.error("Fout bij laden state:", err);
@@ -578,6 +895,8 @@ async function loadStateFromServer() {
       tiles: [],
       quests: []
     });
+    applyIdleEarnings();
+    try { if (window.__bhf_updateCoordsBtn) window.__bhf_updateCoordsBtn(); } catch {}
     renderAll();
   }
 }
@@ -592,7 +911,9 @@ function scheduleSaveState() {
 
 async function saveStateToServer() {
   try {
-    await api("/api/state", {
+    // Update last active timestamp so idle earnings window is accurate
+    if (state) state.lastActiveTs = Date.now();
+    await api(`/api/state?profile=${encodeURIComponent(currentProfile)}` , {
       method: "POST",
       body: JSON.stringify(state),
       headers: { "Content-Type": "application/json" }
@@ -604,11 +925,51 @@ async function saveStateToServer() {
   }
 }
 
+// ======= IDLE EARNINGS =======
+function countBuildings() {
+  let n = 0;
+  forEachTile((tile) => { if (tile.building) n++; });
+  return n;
+}
+
+function applyIdleEarnings() {
+  try {
+    if (!state) return;
+    const now = Date.now();
+    const last = state.lastActiveTs || now;
+    const dtMs = Math.max(0, now - last);
+    const minutes = dtMs / 60000;
+    if (minutes < 1) { state.lastActiveTs = now; return; }
+    const { level } = getLevelInfo(state.xp || 0);
+    const buildings = countBuildings();
+    // Base per-minute income influenced by buildings and level; conservative cap
+    const perMin = buildings * 0.6 + level * 0.25; // coins/min
+    let gain = Math.floor(perMin * minutes);
+    gain = Math.max(0, Math.min(gain, 600)); // cap max idle gain per session
+    if (gain > 0) {
+      state.money += gain;
+      if (state.stats) state.stats.moneyEarned = (state.stats.moneyEarned || 0) + gain;
+      showToast(`💤 Idle beloning: +${fmt(gain)} munten`);
+      spawnFloatingText(`+${fmt(gain)} 💰`, "#ffe082");
+      state.lastActiveTs = now;
+      scheduleSaveState();
+    }
+  } catch {}
+}
+
 // ======= TILE INTERACTION =======
 
 function onTileClick(x, y) {
   if (!state) return;
+  pushUndo("tile-action");
   const tile = state.tiles[y][x];
+  const idx = y * GRID_SIZE + x;
+  const el = farmGridEl.children[idx];
+  if (el && el.getBoundingClientRect) {
+    lastFxRect = el.getBoundingClientRect();
+    // Click ripple feedback
+    spawnTileRipple(el);
+  }
 
   if (currentAction === "plant" && selectedCropId) {
     plantCrop(tile, selectedCropId);
@@ -636,6 +997,9 @@ function plantCrop(tile, cropId) {
   const crop = CROPS[cropId];
   if (!crop) return;
   if (!canUseCrop(cropId)) return;
+  if (crop.seasons && !crop.seasons.includes(state.season)) {
+    return showToast("Niet het juiste seizoen voor dit gewas");
+  }
   if (tile.building || tile.crop) return showToast("Tegel bezet");
   if (!tile.plowed) return showToast("Eerst ploegen (toets P)");
   if (state.money < crop.seedCost) return showToast("Onvoldoende munten");
@@ -646,6 +1010,7 @@ function plantCrop(tile, cropId) {
   tile.cropPlantedAt = Date.now();
 
   addXp(crop.xpPlant);
+  if (state.stats) state.stats.cropsPlanted = (state.stats.cropsPlanted || 0) + 1;
   updateQuestProgress("plant_crop", { cropId });
   showToast(`${crop.emoji} Geplant!`);
   playSfx("plant");
@@ -666,15 +1031,27 @@ function harvestCrop(tile) {
   }
 
   if (!canGainInventory(1)) return showToast("Opslag vol");
-  state.money += crop.value;
+    state.money += crop.value;
+    spawnFloatingText(`+${crop.value} 💰`, "#ffd54f");
   addXp(crop.xpHarvest);
   state.inventory[crop.id] = (state.inventory[crop.id] || 0) + 1;
+  if (tile.fertilizedBonus && canGainInventory(1)) {
+    state.inventory[crop.id] += 1;
+    spawnFloatingText("Bonus +1", "#b2ff59");
+  }
+  if (state.stats) {
+    state.stats.cropsHarvested = (state.stats.cropsHarvested || 0) + 1;
+    state.stats.moneyEarned = (state.stats.moneyEarned || 0) + (crop.value || 0);
+  }
 
   updateQuestProgress("harvest_crop", { cropId: tile.crop });
 
   tile.crop = null;
   tile.cropPlantedAt = null;
   tile.plowed = false;
+  tile.fertilizedBonus = false;
+  spawnParticles("harvest", 8);
+  microShake();
   showToast("Oogst binnen! 💰");
   playSfx("harvest");
 }
@@ -693,6 +1070,7 @@ function buildBuilding(tile, buildingId) {
   tile.lastProductCollectedAt = null;
 
   addXp(b.buildXp);
+  if (state.stats) state.stats.buildingsConstructed = (state.stats.buildingsConstructed || 0) + 1;
   updateQuestProgress("build_building", { buildingId });
   showToast(`${b.emoji} Gebouwd!`);
   playSfx("build");
@@ -708,20 +1086,43 @@ function collectFromBuilding(tile) {
   const last =
     tile.lastProductCollectedAt ||
     tile.buildingStartedAt ||
-    now - b.productionTimeMs;
+    now - getEffectiveBuildingProductionMs(b.id);
   const elapsed = now - last;
 
-  if (elapsed < b.productionTimeMs) {
+  const needMs = getEffectiveBuildingProductionMs(b.id);
+  if (elapsed < needMs) {
     return showToast("Nog in productie");
   }
 
+  // Input requirement check (e.g., windmill wheat -> flour)
+  if (b.requires) {
+    for (const [rk, rv] of Object.entries(b.requires)) {
+      if ((state.inventory[rk] || 0) < rv) {
+        showToast(`Benodigd: ${rv}× ${rk}`);
+        return;
+      }
+    }
+    // Consume inputs
+    for (const [rk, rv] of Object.entries(b.requires)) {
+      state.inventory[rk] = (state.inventory[rk] || 0) - rv;
+    }
+  }
+
   state.money += b.productValue;
+    spawnFloatingText(`+${b.productValue} 💰`, "#80deea");
   addXp(b.productXp);
   const key = productKeyForBuilding(b);
   if (!canGainInventory(1)) return showToast("Opslag vol");
   state.inventory[key] = (state.inventory[key] || 0) + 1;
+  if (state.stats) {
+    state.stats.productsCollected = (state.stats.productsCollected || 0) + 1;
+    state.stats.moneyEarned = (state.stats.moneyEarned || 0) + (b.productValue || 0);
+    if (b.requires) state.stats.productsProcessed = (state.stats.productsProcessed || 0) + 1;
+  }
 
   tile.lastProductCollectedAt = now;
+  spawnParticles("collect", 8);
+  microShake();
 
   updateQuestProgress("collect_product", { buildingId: tile.building });
   showToast(`${b.productName} verzameld!`);
@@ -773,12 +1174,14 @@ function playSfx(kind) {
     collect: { f: 300, t: 0.08 },
     build: { f: 240, t: 0.1 }
   }[kind] || { f: 400, t: 0.06 };
-  o.frequency.setValueAtTime(conf.f, now);
+  const jitter = (Math.random() - 0.5) * 20; // slight pitch variance
+  const durMul = 1 + (Math.random() - 0.5) * 0.2;
+  o.frequency.setValueAtTime(conf.f + jitter, now);
   g.gain.setValueAtTime(0.08, now);
-  g.gain.exponentialRampToValueAtTime(0.0001, now + conf.t);
+  g.gain.exponentialRampToValueAtTime(0.0001, now + conf.t * durMul);
   o.connect(g).connect(audioCtx.destination);
   o.start();
-  o.stop(now + conf.t);
+  o.stop(now + conf.t * durMul);
 }
 
 // ======= QUESTS =======
@@ -811,33 +1214,65 @@ function updateQuestProgress(type, payload) {
 
 // ======= RENDER =======
 
+/**
+ * Main per-tick update pipeline; throttles heavy grid rendering, updates
+ * dynamic systems (energy, market, seasons, weather) and applies visual state.
+ */
 function renderAll() {
   regenEnergy();
   updateMarket();
   updateSeasonsAndWeather();
   renderHud();
   renderToolbarLockState();
-  renderGrid();
+  // Throttle heavy grid DOM updates
+  const nowTs = Date.now();
+  if (nowTs - lastGridRenderTs >= GRID_RENDER_THROTTLE_MS) {
+    renderGrid();
+    lastGridRenderTs = nowTs;
+  }
   renderQuests();
   renderInventory();
+  renderStats();
   updateToolsIndicator();
   updateSellButtonIndicator();
   renderTimeOverlay();
   renderWeatherOverlay();
+  applySeasonClass();
+  adjustCropBobDuration();
+  detectLevelUpBloom();
+  autoActions();
+}
+
+/**
+ * Execute automatic harvest / collect actions if toggles are enabled.
+ * Uses helper readiness checks and short-circuits when both are disabled.
+ */
+function autoActions() {
+  if (!state) return;
+  const doHarvest = window.__bhf_autoHarvestEnabled && window.__bhf_autoHarvestEnabled();
+  const doCollect = window.__bhf_autoCollectEnabled && window.__bhf_autoCollectEnabled();
+  if (!doHarvest && !doCollect) return;
+  const now = Date.now();
+  forEachTile((tile) => {
+    if (doHarvest && tileCropReady(tile, now)) harvestCrop(tile);
+    if (doCollect && tileBuildingReady(tile, now)) collectFromBuilding(tile);
+  });
 }
 
 function renderHud() {
-  hudMoneyEl.textContent = state.money;
+  hudMoneyEl.textContent = fmt(state.money);
 
   const { level, currentLevelXp, nextLevelXp } = getLevelInfo(state.xp);
   hudLevelEl.textContent = level;
-  hudXpEl.textContent = state.xp;
-  hudXpNextEl.textContent = nextLevelXp;
+  hudXpEl.textContent = fmt(state.xp);
+  hudXpNextEl.textContent = fmt(nextLevelXp);
 
   const range = nextLevelXp - currentLevelXp;
   const progress = state.xp - currentLevelXp;
   const percent = Math.max(0, Math.min(100, (progress / range) * 100));
   hudXpBarEl.style.width = `${percent}%`;
+  // Store current level for bloom detection if not set
+  if (!prevLevel) prevLevel = level;
 
   updateHudActionLabel();
 
@@ -856,8 +1291,79 @@ function renderHud() {
     hudStorageCapEl.textContent = state.inventoryCapacity;
   }
   // Season / Weather HUD
-  if (hudSeasonEl) hudSeasonEl.textContent = state.season || "Zomer";
-  if (hudWeatherEl) hudWeatherEl.textContent = state.weather || "Helder";
+  if (hudSeasonEl) {
+    hudSeasonEl.textContent = state.season || "Zomer";
+    const seasonMul = (SEASONS[state.seasonIndex] || SEASONS[1]).speed;
+    hudSeasonEl.title = `Seizoen invloed: ×${seasonMul.toFixed(2)} groeisnelheid`;
+  }
+  if (hudWeatherEl) {
+    hudWeatherEl.textContent = state.weather || "Helder";
+    const wMul = weatherSpeedMultiplier();
+    const note = state.weather === "Regen"
+      ? "(snellere groei, minder watergebruik)"
+      : state.weather === "Sneeuw"
+      ? "(langzamere groei, tragere dierproductie)"
+      : "";
+    hudWeatherEl.title = `Weer invloed: ×${wMul.toFixed(2)} ${note}`;
+  }
+  // Market trend HUD
+  if (hudMarketTrendEl && state.market && state.market.multipliers) {
+    const vals = Object.values(state.market.multipliers).filter(v => typeof v === 'number' && isFinite(v));
+    const avg = vals.length ? (vals.reduce((a,b)=>a+b,0) / vals.length) : 1.0;
+    const arrow = avg > 1.03 ? '↑' : (avg < 0.97 ? '↓' : '→');
+    hudMarketTrendEl.textContent = `${arrow} ×${avg.toFixed(2)}`;
+    hudMarketTrendEl.title = `Gemiddelde markt: ×${avg.toFixed(2)}`;
+    // Draw sparkline for recent market averages
+    if (hudMarketSparkEl && typeof hudMarketSparkEl.getContext === 'function') {
+      marketTrendHistory.push(avg);
+      const w = hudMarketSparkEl.width || 80;
+      const h = hudMarketSparkEl.height || 16;
+      const maxPoints = Math.max(10, w);
+      if (marketTrendHistory.length > maxPoints) {
+        marketTrendHistory.splice(0, marketTrendHistory.length - maxPoints);
+      }
+      const ctx = hudMarketSparkEl.getContext('2d');
+      if (ctx) {
+        ctx.clearRect(0, 0, w, h);
+        const minV = 0.7, maxV = 1.4;
+        // Baseline at ×1.0 for readability
+        const baselineY = h - ((1.0 - minV) / (maxV - minV)) * (h - 1);
+        ctx.beginPath();
+        ctx.moveTo(0, baselineY);
+        ctx.lineTo(w, baselineY);
+        ctx.strokeStyle = 'rgba(0,0,0,0.25)';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+        const n = marketTrendHistory.length;
+        if (n > 1) {
+          ctx.beginPath();
+          for (let i = 0; i < n; i++) {
+            const v = Math.max(minV, Math.min(maxV, marketTrendHistory[i]));
+            const x = (i / (n - 1)) * (w - 1);
+            const y = h - ((v - minV) / (maxV - minV)) * (h - 1);
+            if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+          }
+          ctx.strokeStyle = avg >= 1.0 ? '#2e7d32' : '#b71c1c';
+          ctx.lineWidth = 1;
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  // Update action button tooltips to reflect weather effects
+  const waterBtn = document.querySelector('.action-btn[data-action="water"]');
+  if (waterBtn) {
+    waterBtn.title = state.weather === "Regen"
+      ? "Water geven: geen 💧 verbruik dankzij regen"
+      : "Water geven: verbruikt 1× 💧";
+  }
+  const collectBtn = document.querySelector('.action-btn[data-action="collect"]');
+  if (collectBtn) {
+    collectBtn.title = state.weather === "Sneeuw"
+      ? "Verzamelen: productie duurt langer bij sneeuw"
+      : "Verzamelen: standaard productietijd";
+  }
 }
 
 function updateHudActionLabel() {
@@ -886,10 +1392,18 @@ function renderToolbarLockState() {
   document.querySelectorAll(".crop-btn").forEach((btn) => {
     const cropId = btn.dataset.cropId;
     const crop = CROPS[cropId];
-    const locked = level < crop.minLevel;
+    const lockedByLevel = level < crop.minLevel;
+    const inSeason = !crop.seasons || crop.seasons.includes(state.season);
+    const lockedBySeason = !inSeason;
+    const locked = lockedByLevel || lockedBySeason;
     btn.classList.toggle("locked", locked);
-    if (locked) {
-      btn.title = `${crop.name} vergrendeld — vereist level ${crop.minLevel}`;
+    const seasonsText = crop.seasons ? `Seizoen: ${crop.seasons.join("/")}` : "Altijd";
+    if (lockedByLevel) {
+      btn.title = `${crop.name} vergrendeld — level ${crop.minLevel}+ vereist (${seasonsText})`;
+    } else if (lockedBySeason) {
+      btn.title = `${crop.name} niet in seizoen — ${seasonsText}`;
+    } else {
+      btn.title = `${crop.emoji} ${crop.name} (kost ${crop.seedCost}) — ${seasonsText}`;
     }
   });
 
@@ -938,6 +1452,9 @@ function updateToolbarSelection() {
 function renderGrid() {
   const now = Date.now();
   const { children } = farmGridEl;
+  const seasonMul = (SEASONS[state.seasonIndex] || SEASONS[1]).speed;
+  const weatherMul = weatherSpeedMultiplier();
+  const speedMul = seasonMul * weatherMul;
 
   for (let y = 0; y < GRID_SIZE; y++) {
     for (let x = 0; x < GRID_SIZE; x++) {
@@ -949,6 +1466,10 @@ function renderGrid() {
       el.style.backgroundImage = "";
       const indicator = el.querySelector(".tile-indicator");
       if (indicator) indicator.remove();
+      const oldCoord = el.querySelector('.tile-coord');
+      if (oldCoord) oldCoord.remove();
+      const oldSprite = el.querySelector(".tile-sprite");
+      if (oldSprite) oldSprite.remove();
       const oldAnimal = el.querySelector(".tile-animal");
       if (oldAnimal) oldAnimal.remove();
       const oldBlades = el.querySelector(".tile-overlay-blades");
@@ -958,6 +1479,12 @@ function renderGrid() {
 
       if (!tile.crop && !tile.building) {
         el.classList.add(tile.plowed ? "tile-plowed" : "tile-empty");
+        if (state.settings && state.settings.showCoords) {
+          const c = document.createElement('div');
+          c.className = 'tile-coord';
+          c.textContent = `${x},${y}`;
+          el.appendChild(c);
+        }
         continue;
       }
 
@@ -971,8 +1498,18 @@ function renderGrid() {
         }
         if (isReady) {
           el.classList.add("tile-crop-ready");
+          el.title = `${crop.name}: klaar om te oogsten\nWaarde: ${crop.value} | XP: ${crop.xpHarvest}`;
         } else {
           el.classList.add("tile-crop-growing");
+          const rem = Math.max(0, getEffectiveCropGrowMs(crop.id) - elapsed);
+          const s = Math.ceil(rem / 1000);
+          el.title = `${crop.name}: rijp over ${s}s\nSnelheid: ×${speedMul.toFixed(2)} (seizoen ×${seasonMul.toFixed(2)}, weer ×${weatherMul.toFixed(2)})`;
+        }
+        if (tile.fertilizedBonus) {
+          const buff = document.createElement("div");
+            buff.className = "tile-buff-icon";
+            buff.textContent = "🧪";
+            el.appendChild(buff);
         }
       }
 
@@ -986,14 +1523,34 @@ function renderGrid() {
         const last =
           tile.lastProductCollectedAt ||
           tile.buildingStartedAt ||
-          now - b.productionTimeMs;
+          now - getEffectiveBuildingProductionMs(b.id);
         const elapsed = now - last;
 
-        if (elapsed >= b.productionTimeMs) {
+        if (elapsed >= getEffectiveBuildingProductionMs(b.id)) {
           const ind = document.createElement("div");
           ind.classList.add("tile-indicator");
           ind.textContent = "✔";
           el.appendChild(ind);
+          // Check input requirements (e.g., windmill needs wheat)
+          let reqOk = true;
+          if (b.requires) {
+            for (const [rk, rv] of Object.entries(b.requires)) {
+              if ((state.inventory[rk] || 0) < rv) { reqOk = false; break; }
+            }
+          }
+          if (reqOk) {
+            el.title = `${b.name}: ${b.productName} klaar om te verzamelen\nWaarde: ${b.productValue} | XP: ${b.productXp}`;
+            el.classList.add("tile-building-ready");
+          } else {
+            el.title = `${b.name}: wacht op input (${Object.entries(b.requires).map(([rk,rv])=>`${rv}× ${rk}`).join(', ')})`;
+            ind.textContent = "…"; // show waiting indicator instead of checkmark
+          }
+        } else {
+          const need = getEffectiveBuildingProductionMs(b.id);
+          const rem = Math.max(0, need - elapsed);
+          const s = Math.ceil(rem / 1000);
+          const bMul = state.weather === "Sneeuw" ? 1.3 : 1.0;
+          el.title = `${b.name}: ${b.productName} klaar over ${s}s\nProductie: ×${bMul.toFixed(2)} (weer)`;
         }
 
         // Animal overlay for barns
@@ -1020,6 +1577,13 @@ function renderGrid() {
           rip.style.backgroundImage = `url(${SPRITES.overlay.well_ripple})`;
           el.appendChild(rip);
         }
+      }
+      // Add coord label for non-empty tiles if enabled
+      if (state.settings && state.settings.showCoords) {
+        const c = document.createElement('div');
+        c.className = 'tile-coord';
+        c.textContent = `${x},${y}`;
+        el.appendChild(c);
       }
     }
   }
@@ -1062,22 +1626,110 @@ function setTileSprite(el, kind, id, isReady) {
       if (!m) return false;
       const path = isReady ? m.mature : m.growing;
       if (!path) return false;
-      el.style.backgroundImage = `url(${path})`;
+      const sprite = document.createElement("div");
+      sprite.className = `tile-sprite tile-sprite-crop ${isReady ? 'tile-sprite-crop-mature' : 'tile-sprite-crop-growing'}`;
+      sprite.style.backgroundImage = `url(${path})`;
+      el.appendChild(sprite);
       return true;
     }
     if (kind === "building") {
       const path = SPRITES.building[id];
       if (!path) return false;
-      el.style.backgroundImage = `url(${path})`;
+      const sprite = document.createElement("div");
+      sprite.className = "tile-sprite tile-sprite-building";
+      sprite.style.backgroundImage = `url(${path})`;
+      el.appendChild(sprite);
       return true;
     }
   } catch {}
   return false;
 }
 
+// ======= PARTICLES =======
+/**
+ * Spawn decorative particle effects with seasonal & weather palette mixing.
+ * Rate limited (<=64 particles per 800ms window) and disabled under reduced motion.
+ * @param {string} kind Semantic effect type (e.g. 'harvest','collect').
+ * @param {number} count Desired particle count.
+ */
+function spawnParticles(kind, count) {
+  if (window.__bhf_reducedMotion && window.__bhf_reducedMotion()) return;
+  // Rate cap window
+  const now = Date.now();
+  if (!spawnParticles._windowStart || now - spawnParticles._windowStart > 800) {
+    spawnParticles._windowStart = now;
+    spawnParticles._emitted = 0;
+  }
+  if (spawnParticles._emitted && spawnParticles._emitted > 64) return; // cap
+  const rect = lastFxRect || (farmGridEl && farmGridEl.getBoundingClientRect && farmGridEl.getBoundingClientRect());
+  if (!rect) return;
+  const season = state.season || "Zomer";
+  const weather = state.weather || "Helder";
+  const palettes = {
+    harvest: ["#ffd54f", "#ffe082", "#ffca28"],
+    collect: ["#80deea", "#4dd0e1", "#26c6da"],
+    winter: ["#bbdefb", "#e3f2fd", "#90caf9"],
+    autumn: ["#ffb74d", "#ffa726", "#ffcc80"],
+    spring: ["#aed581", "#9ccc65", "#dce775"],
+    storm: ["#eceff1", "#cfd8dc", "#b0bec5"],
+    rain: ["#64b5f6", "#42a5f5", "#90caf9"],
+    snow: ["#ffffff", "#e0f7fa", "#fffde7"]
+  };
+  const seasonKey = season === "Herfst" ? "autumn" : season === "Winter" ? "winter" : season === "Lente" ? "spring" : null;
+  const weatherKey = weather === "Regen" ? "rain" : weather === "Storm" ? "storm" : weather === "Sneeuw" ? "snow" : null;
+  const base = palettes[kind] || ["#ffd54f", "#80deea"];
+  const mix = [...base, ...(seasonKey ? palettes[seasonKey] : []), ...(weatherKey ? palettes[weatherKey] : [])];
+  for (let i = 0; i < count; i++) {
+    if (spawnParticles._emitted > 64) break;
+    const p = document.createElement("div");
+    p.style.position = "fixed";
+    p.style.left = `${rect.left + rect.width / 2}px`;
+    p.style.top = `${rect.top + rect.height / 2}px`;
+    p.style.width = "6px";
+    p.style.height = "6px";
+    let shape = "circle";
+    if (seasonKey === "autumn") shape = "square";
+    if (weatherKey === "storm") shape = "diamond";
+    if (shape === "circle") p.style.borderRadius = "50%";
+    if (shape === "square") p.style.borderRadius = "2px";
+    if (shape === "diamond") { p.style.borderRadius = "2px"; p.style.transform = "rotate(45deg)"; }
+    p.style.pointerEvents = "none";
+    p.style.zIndex = 999;
+    p.style.background = mix[Math.floor(Math.random() * mix.length)] || (kind === "harvest" ? "#ffd54f" : "#80deea");
+    p.style.boxShadow = "0 0 4px rgba(0,0,0,0.2)";
+    p.style.opacity = "0.9";
+    const dx = (Math.random() - 0.5) * 60;
+    const dy = (Math.random() - 0.5) * 60;
+    const dur = 500 + Math.random() * 300;
+    const anim = p.animate([
+      { transform: "translate(0,0)", opacity: 0.9 },
+      { transform: `translate(${dx}px, ${dy}px)`, opacity: 0 }
+    ], { duration: dur, easing: "ease-out" });
+    document.body.appendChild(p);
+    anim.onfinish = () => p.remove();
+    spawnParticles._emitted++;
+  }
+}
+
+// ======= TILE RIPPLE =======
+function spawnTileRipple(el) {
+  try {
+    const r = document.createElement("div");
+    r.className = "tile-click-ripple";
+    el.appendChild(r);
+    r.addEventListener("animationend", () => r.remove(), { once: true });
+  } catch {}
+}
+
 // ======= SHORTCUTS =======
 function setupShortcuts() {
   document.addEventListener("keydown", (e) => {
+    // Undo (Ctrl+Z)
+    if (e.ctrlKey && e.key.toLowerCase() === 'z') {
+      e.preventDefault();
+      undoLast();
+      return;
+    }
     // Escape cancels
     if (e.key === "Escape") {
       currentAction = "none";
@@ -1177,6 +1829,13 @@ function setupShortcuts() {
       toggleShop();
       return;
     }
+
+    // Help: F1 or ?
+    if (e.key === "F1" || e.key === "?") {
+      e.preventDefault();
+      toggleHelp();
+      return;
+    }
   });
 }
 
@@ -1215,6 +1874,7 @@ function renderQuests() {
         state.money += qDef.rewardMoney;
         addXp(qDef.rewardXp);
         showToast("Beloning geclaimd! 💰⭐");
+        spawnBloom();
         renderAll();
         scheduleSaveState();
       });
@@ -1251,11 +1911,14 @@ function renderInventory() {
     const row = document.createElement("div");
     row.className = "inv-row";
     const unit = prices[e.k] || 0;
-    row.title = unit > 0 ? `Waarde per stuk: ${unit}` : "Niet te verkopen";
+    const mult = (state.market && state.market.multipliers && state.market.multipliers[e.k]) || 1.0;
+    const unitTxt = unit > 0 ? fmt(unit) : "-";
+    row.title = unit > 0 ? `Waarde per stuk: ${unitTxt} (markt ×${mult.toFixed(2)})` : "Niet te verkopen";
     const left = document.createElement("span");
     left.textContent = `${e.icon} ${e.label}`;
     const right = document.createElement("span");
-    right.textContent = e.v;
+    const total = unit * e.v;
+    right.textContent = unit > 0 ? `${fmt(e.v)} (= ${fmt(total)})` : fmt(e.v);
     row.appendChild(left);
     row.appendChild(right);
     if (e.k !== "water" && e.k !== "toolkit" && unit > 0 && e.v > 0) {
@@ -1266,15 +1929,45 @@ function renderInventory() {
         const amount = state.inventory[e.k] || 0;
         if (amount <= 0) return;
         const gain = unit * amount;
+        const ok = window.confirm(`Verkoop ${fmt(amount)} × ${e.label} voor ${fmt(gain)} munten?`);
+        if (!ok) return;
         state.inventory[e.k] = 0;
         state.money += gain;
-        showToast(`Verkocht ${amount} × ${e.label} voor ${gain} 💰`);
+        showToast(`Verkocht ${fmt(amount)} × ${e.label} voor ${fmt(gain)} 💰`);
         renderAll();
         scheduleSaveState();
       });
       row.appendChild(btn);
     }
+    // Market trend coloring
+    if (mult > 1.05) {
+      row.style.borderColor = '#7cb342';
+    } else if (mult < 0.95) {
+      row.style.borderColor = '#d77';
+    }
     inventoryListEl.appendChild(row);
+  });
+}
+
+function renderStats() {
+  if (!statsListEl || !state) return;
+  const s = state.stats || {};
+  statsListEl.innerHTML = "";
+  const rows = [
+    ["🌱 Gezaaid", s.cropsPlanted || 0],
+    ["🌾 Geoogst", s.cropsHarvested || 0],
+    ["📦 Verzameld", s.productsCollected || 0],
+    ["⚙️ Verwerkt", s.productsProcessed || 0],
+    ["🏗️ Gebouwd", s.buildingsConstructed || 0],
+    ["💰 Verdiend", s.moneyEarned || 0]
+  ];
+  rows.forEach(([label, value]) => {
+    const row = document.createElement('div');
+    row.className = 'inv-row';
+    const left = document.createElement('span'); left.textContent = label;
+    const right = document.createElement('span'); right.textContent = fmt(value);
+    row.appendChild(left); row.appendChild(right);
+    statsListEl.appendChild(row);
   });
 }
 
@@ -1304,6 +1997,43 @@ function showToast(text) {
   }, 1300);
 }
 
+// Floating text feedback near last clicked tile (or grid center)
+function spawnFloatingText(text, color = "#fff") {
+  try {
+    const rect = lastFxRect || (farmGridEl && farmGridEl.getBoundingClientRect && farmGridEl.getBoundingClientRect());
+    if (!rect) return;
+    const el = document.createElement("div");
+    el.textContent = text;
+    el.style.position = "fixed";
+    el.style.left = `${rect.left + rect.width / 2}px`;
+    el.style.top = `${rect.top + rect.height / 2}px`;
+    el.style.transform = "translate(-50%, -50%)";
+    el.style.color = color;
+    el.style.fontWeight = "700";
+    el.style.textShadow = "0 1px 2px rgba(0,0,0,0.5)";
+    el.style.pointerEvents = "none";
+    el.style.zIndex = 1000;
+    document.body.appendChild(el);
+    const anim = el.animate([
+      { opacity: 1, transform: "translate(-50%, -50%) translateY(0)" },
+      { opacity: 0, transform: "translate(-50%, -50%) translateY(-28px)" }
+    ], { duration: 900, easing: "ease-out" });
+    anim.onfinish = () => el.remove();
+  } catch {}
+}
+
+// Micro shake of the farm wrapper for impactful actions
+function microShake() {
+  if (window.__bhf_reducedMotion && window.__bhf_reducedMotion()) return; // skip shake
+  const wrap = document.getElementById("farm-wrapper");
+  if (!wrap) return;
+  wrap.classList.remove("shake");
+  // force reflow to restart animation
+  void wrap.offsetWidth;
+  wrap.classList.add("shake");
+  setTimeout(() => wrap.classList.remove("shake"), 180);
+}
+
 // Fetch wrapper + save indicator
 async function api(path, options = {}) {
   const res = await fetch(path, options);
@@ -1314,6 +2044,29 @@ async function api(path, options = {}) {
   const ct = res.headers.get("content-type") || "";
   if (ct.includes("application/json")) return res.json();
   return res.text();
+}
+
+// ======= UNDO STACK =======
+function deepClone(obj) {
+  try { if (window.structuredClone) return structuredClone(obj); } catch {}
+  try { return JSON.parse(JSON.stringify(obj)); } catch { return null; }
+}
+
+function pushUndo(reason = "") {
+  if (!state) return;
+  const snap = deepClone(state);
+  if (!snap) return;
+  undoStack.push({ state: snap, reason: String(reason || "") });
+  if (undoStack.length > 20) undoStack.shift();
+}
+
+function undoLast() {
+  if (undoStack.length === 0) { showToast("Niets om ongedaan te maken"); return; }
+  const entry = undoStack.pop();
+  state = ensureStateShape(entry.state);
+  showToast("Actie ongedaan gemaakt");
+  renderAll();
+  scheduleSaveState();
 }
 
 function updateSellButtonIndicator() {
@@ -1334,40 +2087,24 @@ function updateSellButtonIndicator() {
 function harvestAllReady() {
   let count = 0;
   const now = Date.now();
-  for (let y = 0; y < GRID_SIZE; y++) {
-    for (let x = 0; x < GRID_SIZE; x++) {
-      const tile = state.tiles[y][x];
-      if (!tile.crop) continue;
-      const crop = CROPS[tile.crop];
-      if (!crop) continue;
-      const plantedAt = tile.cropPlantedAt || now;
-      const elapsed = now - plantedAt;
-      if (elapsed >= getEffectiveCropGrowMs(crop.id)) {
-        harvestCrop(tile);
-        count++;
-      }
+  forEachTile((tile) => {
+    if (tileCropReady(tile, now)) {
+      harvestCrop(tile);
+      count++;
     }
-  }
+  });
   return count;
 }
 
 function collectAllReady() {
   let count = 0;
   const now = Date.now();
-  for (let y = 0; y < GRID_SIZE; y++) {
-    for (let x = 0; x < GRID_SIZE; x++) {
-      const tile = state.tiles[y][x];
-      if (!tile.building) continue;
-      const b = BUILDINGS[tile.building];
-      if (!b) continue;
-      const last = tile.lastProductCollectedAt || tile.buildingStartedAt || now - b.productionTimeMs;
-      const elapsed = now - last;
-      if (elapsed >= b.productionTimeMs) {
-        collectFromBuilding(tile);
-        count++;
-      }
+  forEachTile((tile) => {
+    if (tileBuildingReady(tile, now)) {
+      collectFromBuilding(tile);
+      count++;
     }
-  }
+  });
   return count;
 }
 
@@ -1434,7 +2171,8 @@ function waterTile(tile) {
   const crop = CROPS[tile.crop];
   if (!crop) return;
   if (!state.tools || state.tools.wateringCan <= 0) return showToast("Gieter kapot — repareer eerst");
-  if ((state.inventory.water || 0) <= 0) return showToast("Geen water in voorraad");
+  const raining = state.weather === "Regen";
+  if (!raining && (state.inventory.water || 0) <= 0) return showToast("Geen water in voorraad");
   if (!spendEnergy(1)) return;
   const now = Date.now();
   const plantedAt = tile.cropPlantedAt || now;
@@ -1443,9 +2181,11 @@ function waterTile(tile) {
   if (remaining <= 0) return showToast("Al klaar om te oogsten");
   const delta = Math.min(30_000, remaining);
   tile.cropPlantedAt = plantedAt - delta; // versnellen
-  state.inventory.water = Math.max(0, (state.inventory.water || 0) - 1);
+  if (!raining) {
+    state.inventory.water = Math.max(0, (state.inventory.water || 0) - 1);
+  }
   state.tools.wateringCan = Math.max(0, (state.tools.wateringCan || 0) - 1);
-  showToast("Gewas bewaterd (-1 💧)");
+  showToast(raining ? "Gewas bewaterd (regen — geen verbruik)" : "Gewas bewaterd (-1 💧)");
   playSfx("water");
 }
 
@@ -1463,14 +2203,15 @@ function fertilizeTile(tile) {
   const delta = Math.min(60_000, remaining);
   tile.cropPlantedAt = plantedAt - delta;
   state.inventory.fertilizer = Math.max(0, (state.inventory.fertilizer || 0) - 1);
-  showToast("Gewas bemest (-1 🧪)");
+  tile.fertilizedBonus = true; // grant a bonus yield on harvest
+  showToast("Gewas bemest: snellere groei + bonusopbrengst (-1 🧪)");
 }
 
 // Energy / inventory / market / time helpers
 function regenEnergy() {
   const now = Date.now();
   const dt = Math.max(0, now - (state.lastEnergyTs || now));
-  const regenPerMs = 1 / 5000; // 1 energy per 5s
+  const regenPerMs = 1 / 4000; // slightly faster regen: 1 energy per 4s
   state.energy = Math.min(state.maxEnergy, state.energy + dt * regenPerMs);
   state.lastEnergyTs = now;
 }
@@ -1496,14 +2237,14 @@ function canGainInventory(amount) {
 function updateMarket() {
   const now = Date.now();
   if (!state.market) return;
-  if (now - state.market.lastUpdateTs < 60_000) return;
+  if (now - state.market.lastUpdateTs < 45_000) return; // update a bit more frequently
   const keys = new Set([
     ...Object.keys(CROPS),
     "eggs","milk","grain_pack","flour","water","meal","toolkit"
   ]);
   keys.forEach((k) => {
     const cur = state.market.multipliers[k] || 1.0;
-    const delta = (Math.random() * 0.1) - 0.05; // -0.05..0.05
+    const delta = (Math.random() * 0.12) - 0.06; // slightly wider range
     const next = Math.max(0.7, Math.min(1.4, cur + delta));
     state.market.multipliers[k] = parseFloat(next.toFixed(2));
   });
@@ -1520,6 +2261,51 @@ function renderTimeOverlay() {
   const nightStrength = Math.max(0, Math.cos(state.timeOfDay * Math.PI * 2));
   const opacity = Math.max(0, nightStrength * 0.35);
   timeOverlayEl.style.opacity = opacity.toFixed(2);
+  // Stars overlay follows night strength
+  const stars = document.getElementById("stars-overlay");
+  if (stars) stars.style.opacity = (nightStrength * 0.6).toFixed(2);
+  // Horizon brightness shift (subtle day/night tint)
+  const hb = document.getElementById('horizon-back');
+  const hf = document.getElementById('horizon-front');
+  if (hb) hb.style.filter = `brightness(${0.85 + nightStrength * 0.15})`;
+  if (hf) hf.style.filter = `brightness(${0.9 + nightStrength * 0.1})`;
+}
+
+// ======= Season visual helpers =======
+function applySeasonClass() {
+  const wrap = document.getElementById('farm-wrapper');
+  if (!wrap) return;
+  wrap.classList.remove('season-spring','season-summer','season-autumn','season-winter');
+  const map = { 'Lente':'season-spring','Zomer':'season-summer','Herfst':'season-autumn','Winter':'season-winter' };
+  wrap.classList.add(map[state.season] || 'season-summer');
+}
+
+function adjustCropBobDuration() {
+  const wrap = document.getElementById('farm-wrapper');
+  if (!wrap) return;
+  let dur = 2.2;
+  if (state.weather === 'Storm') dur = 1.6;
+  else if (state.weather === 'Regen') dur = 2.0;
+  else if (state.weather === 'Sneeuw') dur = 2.8;
+  wrap.style.setProperty('--crop-bob-duration', `${dur}s`);
+}
+
+function detectLevelUpBloom() {
+  const { level } = getLevelInfo(state.xp);
+  if (level > prevLevel) {
+    showToast(`🎉 Level omhoog! Niveau ${level}`);
+    spawnBloom();
+    prevLevel = level;
+  }
+}
+
+function spawnBloom() {
+  if (window.__bhf_reducedMotion && window.__bhf_reducedMotion()) return;
+  const el = document.createElement('div');
+  el.className = 'bloom-effect';
+  document.body.appendChild(el);
+  el.addEventListener('animationend', () => el.remove(), { once: true });
+  showToast('✨ Visueel effect');
 }
 
 // ======= SEASONS / WEATHER =======
@@ -1575,16 +2361,30 @@ function getEffectiveCropGrowMs(cropId) {
   return Math.max(1000, Math.round(crop.growTimeMs / speed));
 }
 
+function getEffectiveBuildingProductionMs(buildingId) {
+  const b = BUILDINGS[buildingId];
+  if (!b) return 0;
+  let mul = 1.0;
+  if (state.weather === "Sneeuw") mul *= 1.3; // trager bij sneeuw
+  return Math.max(1000, Math.round(b.productionTimeMs * mul));
+}
+
 function renderWeatherOverlay() {
   if (!weatherOverlayEl) return;
   weatherOverlayEl.innerHTML = "";
   let cls = null;
   if (state.weather === "Regen") cls = "weather-rain";
   if (state.weather === "Sneeuw") cls = "weather-snow";
+  if (state.weather === "Storm") cls = "weather-storm";
   if (cls) {
     const layer = document.createElement("div");
     layer.className = cls;
     weatherOverlayEl.appendChild(layer);
+    if (cls === "weather-storm") {
+      const flash = document.createElement("div");
+      flash.className = "storm-flash";
+      weatherOverlayEl.appendChild(flash);
+    }
   }
 }
 
@@ -1604,6 +2404,7 @@ function openShop() {
   const body = document.getElementById("shop-body");
   if (!modal || !body) return;
   body.innerHTML = "";
+  const mults = (state.market && state.market.multipliers) || {};
   getShopItems().forEach((it) => {
     const row = document.createElement("div");
     row.className = "shop-row";
@@ -1624,6 +2425,22 @@ function openShop() {
       renderAll();
       scheduleSaveState();
     });
+    // Helpful price breakdown tooltip
+    let tip = "";
+    if (it.id === "water10") {
+      const base = BUILDINGS.water_well.productValue;
+      const m = mults.water || 1.0;
+      tip = `Prijs ≈ (basis ${base} × markt ×3) ×10; markt ×${m.toFixed(2)}`;
+    } else if (it.id === "tool1") {
+      const base = BUILDINGS.storage_shed.productValue;
+      const m = mults.toolkit || 1.0;
+      tip = `Prijs ≈ basis ${base} × markt ×1.2; markt ×${m.toFixed(2)}`;
+    } else if (it.id === "fert5") {
+      tip = "Vaste prijs; versnelt groei met bemesten";
+    } else if (it.id === "cap20") {
+      tip = "Vergroot opslagcapaciteit met 20";
+    }
+    row.title = tip || "";
     row.appendChild(title);
     row.appendChild(price);
     row.appendChild(btn);
@@ -1644,5 +2461,26 @@ function toggleShop() {
   const modal = document.getElementById("shop-modal");
   if (!modal) return;
   if (modal.classList.contains("hidden")) openShop(); else closeShop();
+}
+
+// ======= HELP =======
+function openHelp() {
+  const modal = document.getElementById("help-modal");
+  if (!modal) return;
+  modal.classList.remove("hidden");
+  modal.querySelectorAll('[data-close="help"]').forEach((el) => {
+    el.addEventListener("click", closeHelp, { once: true });
+  });
+}
+
+function closeHelp() {
+  const modal = document.getElementById("help-modal");
+  if (modal) modal.classList.add("hidden");
+}
+
+function toggleHelp() {
+  const modal = document.getElementById("help-modal");
+  if (!modal) return;
+  if (modal.classList.contains("hidden")) openHelp(); else closeHelp();
 }
 

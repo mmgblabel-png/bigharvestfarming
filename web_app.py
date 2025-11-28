@@ -1,10 +1,13 @@
 from flask import Flask, jsonify, request, send_from_directory
 import json
 import os
+from pathlib import Path
 
 app = Flask(__name__, static_folder="static", static_url_path="/static")
 
-STATE_FILE = "game_state.json"
+STATE_FILE = os.getenv("BHF_STATE_FILE", "game_state.json")
+SAVES_DIR = os.getenv("BHF_SAVES_DIR", "saves")
+Path(SAVES_DIR).mkdir(parents=True, exist_ok=True)
 GRID_SIZE = 20
 
 
@@ -28,10 +31,19 @@ def default_state():
     return {"money": 500, "xp": 0, "tiles": tiles, "quests": []}
 
 
+def _state_path(profile: str | None):
+    if profile:
+        safe = "".join(c for c in profile if c.isalnum() or c in ("_","-")) or "default"
+        return os.path.join(SAVES_DIR, f"{safe}.json")
+    return STATE_FILE
+
+
 def load_state():
-    if os.path.exists(STATE_FILE):
+    profile = request.args.get("profile") or request.headers.get("X-Profile")
+    path = _state_path(profile)
+    if os.path.exists(path):
         try:
-            with open(STATE_FILE, "r", encoding="utf-8") as f:
+            with open(path, "r", encoding="utf-8") as f:
                 return json.load(f)
         except Exception:
             return default_state()
@@ -40,7 +52,9 @@ def load_state():
 
 
 def save_state(state):
-    with open(STATE_FILE, "w", encoding="utf-8") as f:
+    profile = request.args.get("profile") or request.headers.get("X-Profile")
+    path = _state_path(profile)
+    with open(path, "w", encoding="utf-8") as f:
         json.dump(state, f, ensure_ascii=False, indent=2)
 
 

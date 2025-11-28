@@ -7,6 +7,7 @@
   --ui-bg: #f0f7e8;
   --panel-bg: #ffffff;
   --text-dark: #234018;
+  --crop-bob-duration: 2.2s; /* default duration for crop sway */
 }
 
 /* Algemene layout */
@@ -191,6 +192,28 @@ button.locked::after {
   position: relative;
 }
 
+/* Parallax horizon layers */
+#horizon-back, #horizon-front {
+  position: absolute;
+  left: 0; top: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  border-radius: 10px;
+}
+#horizon-back {
+  background: linear-gradient(to top, #6fa845 0%, #8fcf62 40%, #bfe9a3 70%, #e9fbe0 100%);
+  z-index: -2;
+  animation: horizonDriftBack 120s linear infinite;
+}
+#horizon-front {
+  background: repeating-linear-gradient(-6deg, rgba(90,140,50,0.18) 0 48px, rgba(80,130,45,0.12) 48px 96px);
+  mix-blend-mode: multiply;
+  z-index: -1;
+  opacity: 0.65;
+  animation: horizonDriftFront 60s linear infinite;
+}
+@keyframes horizonDriftBack { from { transform: translateX(0); } to { transform: translateX(-240px); } }
+@keyframes horizonDriftFront { from { transform: translateX(0); } to { transform: translateX(320px); } }
+
 #farm-grid {
   display: grid;
   grid-template-columns: repeat(20, 32px);
@@ -208,6 +231,27 @@ button.locked::after {
   z-index: 1;
 }
 
+/* Night stars overlay (under time overlay) */
+#stars-overlay {
+  position: absolute;
+  inset: 8px 8px 8px 8px;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 0; /* beneath time overlay */
+  background-image: radial-gradient(2px 2px at 10% 20%, rgba(255,255,255,0.9), rgba(255,255,255,0)),
+                    radial-gradient(1.5px 1.5px at 30% 60%, rgba(255,255,255,0.8), rgba(255,255,255,0)),
+                    radial-gradient(1.8px 1.8px at 70% 40%, rgba(255,255,255,0.8), rgba(255,255,255,0)),
+                    radial-gradient(1.2px 1.2px at 85% 75%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+  background-size: 256px 256px;
+  opacity: 0; /* controlled by JS with night strength */
+  animation: starsDrift 40s linear infinite;
+}
+
+@keyframes starsDrift {
+  from { background-position: 0 0, 0 0, 0 0, 0 0; }
+  to   { background-position: 128px 64px, -64px 96px, 96px 48px, -40px 80px; }
+}
+
 #weather-overlay {
   position: absolute;
   inset: 8px 8px 8px 8px;
@@ -220,9 +264,20 @@ button.locked::after {
 .weather-rain, .weather-snow { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
 .weather-rain { background-image: url('/static/assets/overlays/rain.svg'); background-size: 256px 256px; opacity: 0.5; animation: rainMove 1.2s linear infinite; }
 .weather-snow { background-image: url('/static/assets/overlays/snow.svg'); background-size: 256px 256px; opacity: 0.7; animation: snowDrift 6s linear infinite; }
+.weather-storm { background: repeating-linear-gradient( to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.15) 6px, rgba(0,0,0,0.2) 6px, rgba(0,0,0,0.25) 12px ); animation: stormDrift 1.4s linear infinite; }
+.storm-flash { position: absolute; inset: 0; background: radial-gradient(120% 120% at 40% 20%, rgba(255,255,255,0.9), rgba(255,255,255,0)); opacity: 0; animation: lightningFlash 6s ease-in-out infinite; pointer-events: none; }
 
 @keyframes rainMove { from { background-position: 0 0; } to { background-position: -128px 256px; } }
 @keyframes snowDrift { from { background-position: 0 0; } to { background-position: 64px 128px; } }
+@keyframes stormDrift { from { background-position: 0 0; } to { background-position: 0 64px; } }
+@keyframes lightningFlash {
+  0%, 6% { opacity: 0; }
+  7% { opacity: 0.8; }
+  9% { opacity: 0.1; }
+  10% { opacity: 0.6; }
+  12% { opacity: 0; }
+  100% { opacity: 0; }
+}
 
 .tile {
   width: 32px;
@@ -237,9 +292,7 @@ button.locked::after {
   cursor: pointer;
   position: relative;
   transition: filter 0.1s ease, transform 0.06s ease;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* Keep base field/raster visible; sprites render in child */
 }
 
 /* Tile states */
@@ -271,6 +324,17 @@ button.locked::after {
   background: var(--farm-brown);
 }
 
+/* Ready building highlight for improved readability */
+.tile-building-ready {
+  box-shadow: 0 0 6px 2px rgba(255,255,255,0.3), 0 0 4px rgba(0,0,0,0.35);
+  animation: readyPulse 1.6s ease-in-out infinite;
+}
+@keyframes readyPulse {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.15); }
+  100% { filter: brightness(1); }
+}
+
 /* Kleine indicator (bv. product ready) */
 
 .tile-indicator {
@@ -278,6 +342,27 @@ button.locked::after {
   bottom: 1px;
   right: 2px;
   font-size: 12px;
+}
+
+/* Tile coordinate label */
+.tile-coord {
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  font-size: 10px;
+  color: rgba(0,0,0,0.65);
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  pointer-events: none;
+}
+
+/* Buff / status icon (e.g. fertilizer) */
+.tile-buff-icon {
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  font-size: 12px;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.35));
 }
 
 /* Overlay animal sprite */
@@ -342,12 +427,33 @@ button.locked::after {
 }
 
 .tile:hover {
-  filter: brightness(1.05);
+  filter: brightness(1.06);
+  transform: translateY(-0.5px);
 }
 
 @keyframes readyGlow {
   from { box-shadow: 0 0 0 rgba(255, 235, 59, 0.0); }
   to { box-shadow: 0 0 8px rgba(255, 235, 59, 0.8); }
+}
+
+/* Tile click ripple */
+.tile-click-ripple {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 4px;
+  height: 4px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 6px rgba(255,255,255,0.6);
+  animation: tileRipple 350ms ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes tileRipple {
+  from { opacity: 1; transform: translate(-50%, -50%) scale(0.6); }
+  to { opacity: 0; transform: translate(-50%, -50%) scale(2.0); }
 }
 
 /* Quest panel */
@@ -444,6 +550,39 @@ button.locked::after {
   transform: translateX(-50%) translateY(-4px);
 }
 
+/* Tile sprite container so field raster stays visible */
+.tile-sprite {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.2));
+}
+.tile-sprite-crop { width: 80%; height: 80%; }
+.tile-sprite-crop-growing { width: 70%; height: 70%; }
+.tile-sprite-crop-growing { animation: cropBob var(--crop-bob-duration) ease-in-out infinite; }
+.tile-sprite-crop-mature { width: 80%; height: 80%; }
+.tile-sprite-building { width: 90%; height: 90%; }
+
+@keyframes cropBob {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-2px); }
+}
+
+/* Micro shake for impactful events */
+#farm-wrapper.shake { animation: microShake 120ms ease-in-out; }
+@keyframes microShake {
+  0% { transform: translate(0,0); }
+  25% { transform: translate(1px, 0); }
+  50% { transform: translate(-1px, 0); }
+  75% { transform: translate(1px, 0); }
+  100% { transform: translate(0,0); }
+}
+
 /* Modal */
 .modal.hidden { display: none; }
 .modal { position: fixed; inset: 0; z-index: 1000; }
@@ -479,4 +618,70 @@ button.locked::after {
     transform: scale(0.9);
     transform-origin: top left;
   }
+}
+
+/* Reduced motion accessibility override */
+body.reduced-motion *, body.reduced-motion *::before, body.reduced-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition: none !important;
+}
+body.reduced-motion #farm-wrapper.shake { animation: none !important; }
+body.reduced-motion .tile-click-ripple { animation: none !important; opacity: 0.4 !important; }
+body.reduced-motion #stars-overlay,
+body.reduced-motion .weather-rain,
+body.reduced-motion .weather-snow,
+body.reduced-motion .weather-storm,
+body.reduced-motion .storm-flash,
+body.reduced-motion .tile-sprite-crop-growing,
+body.reduced-motion .tile-overlay-blades,
+body.reduced-motion .tile-overlay-ripple { animation: none !important; }
+
+/* High contrast mode */
+body.high-contrast {
+  --farm-green: #2d7d18;
+  --farm-green-dark: #1e5311;
+  --farm-brown: #5d463d;
+  --ui-bg: #eaf5dc;
+  --panel-bg: #ffffff;
+  --text-dark: #0f230c;
+  filter: contrast(1.1) saturate(1.05);
+}
+body.high-contrast #hud { background: linear-gradient(to right, #123b0d, #1f5f17); }
+body.high-contrast button { background: #d9f2c2; }
+body.high-contrast .tile-plowed { background: repeating-linear-gradient(45deg,#7b533a,#7b533a 5px,#6d4a33 5px,#6d4a33 9px); }
+body.high-contrast .tile-crop-ready { box-shadow: 0 0 10px 2px rgba(255,235,59,0.9); }
+body.high-contrast #quest-panel { border-color: #4a7a2d; }
+
+/* Focus outline for keyboard navigation */
+.tile:focus { outline: 2px solid #ffeb3b; outline-offset: 1px; }
+body.high-contrast .tile:focus { outline-color: #ff9800; }
+
+/* Seasonal color grading applied to farm wrapper */
+#farm-wrapper.season-spring { filter: hue-rotate(-10deg) saturate(1.15) brightness(1.05); }
+#farm-wrapper.season-summer { filter: saturate(1.05) brightness(1.02); }
+#farm-wrapper.season-autumn { filter: hue-rotate(25deg) saturate(1.1) contrast(1.05) brightness(0.98); }
+#farm-wrapper.season-winter { filter: hue-rotate(-40deg) saturate(0.85) brightness(0.95) contrast(1.02); }
+
+/* Bloom overlay effect for level-up / quest reward */
+.bloom-effect {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.8), rgba(255,255,255,0) 60%);
+  animation: bloomFade 900ms ease-out forwards;
+  z-index: 1500;
+}
+@keyframes bloomFade {
+  0% { opacity: 0; transform: scale(0.8); }
+  25% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.4); }
+}
+body.reduced-motion .bloom-effect { animation: none !important; opacity: 0.4; }
+
+/* Animal breathing animation */
+.tile-animal { animation: animalBob 1.6s ease-in-out infinite, animalBreath 3.8s ease-in-out infinite; }
+@keyframes animalBreath {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-1px) scale(1.04); }
 }

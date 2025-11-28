@@ -1,46 +1,47 @@
 {
-  "inventory": {
-    "carrot": 0,
-    "corn": 0,
-    "eggs": 0,
-    "flour": 0,
-    "grain_pack": 0,
-    "meal": 0,
-    "milk": 0,
-    "potato": 0,
-    "pumpkin": 0,
-    "sunflower": 0,
-    "tomato": 0,
-    "toolkit": 2,
-    "water": 2,
-    "wheat": 0,
-    "fertilizer": 0
-  },
-  "money": 6643,
+  "money": 500,
   "quests": [
     {
-      "completed": true,
       "id": "plant_wheat_10",
-      "progress": 10,
-      "rewardClaimed": true
+      "progress": 0,
+      "completed": false,
+      "rewardClaimed": false
     },
     {
-      "completed": true,
       "id": "harvest_wheat_10",
-      "progress": 10,
-      "rewardClaimed": true
+      "progress": 0,
+      "completed": false,
+      "rewardClaimed": false
     },
     {
-      "completed": true,
       "id": "build_chicken_coop_1",
-      "progress": 1,
-      "rewardClaimed": true
+      "progress": 0,
+      "completed": false,
+      "rewardClaimed": false
     },
     {
-      "completed": true,
       "id": "collect_eggs_5",
-      "progress": 5,
-      "rewardClaimed": true
+      "progress": 0,
+      "completed": false,
+      "rewardClaimed": false
+    },
+    {
+      "id": "harvest_corn_5",
+      "progress": 0,
+      "completed": false,
+      "rewardClaimed": false
+    },
+    {
+      "id": "build_windmill_1",
+      "progress": 0,
+      "completed": false,
+      "rewardClaimed": false
+    },
+    {
+      "id": "collect_milk_5",
+      "progress": 0,
+      "completed": false,
+      "rewardClaimed": false
     }
   ],
   "tiles": [
@@ -51,7 +52,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -59,7 +61,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -67,7 +70,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -75,7 +79,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -83,7 +88,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -91,7 +97,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -99,7 +106,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -107,7 +115,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -115,23 +124,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": "storage_shed",
-        "buildingStartedAt": 1764319384400,
-        "crop": null,
-        "cropPlantedAt": null,
-        "lastProductCollectedAt": 1764322120387,
-        "plowed": false
-      },
-      {
-        "building": "silo",
-        "buildingStartedAt": 1764319856998,
-        "crop": null,
-        "cropPlantedAt": null,
-        "lastProductCollectedAt": 1764322119411,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -139,7 +133,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -147,15 +142,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": "chicken_coop",
-        "buildingStartedAt": 1764319672538,
-        "crop": null,
-        "cropPlantedAt": null,
-        "lastProductCollectedAt": 1764322116079,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -163,7 +151,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -171,7 +160,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -179,7 +169,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -187,23 +178,53 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
-        "building": "chicken_coop",
-        "buildingStartedAt": 1764320006884,
+        "building": null,
+        "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "lastProductCollectedAt": 1764322110839,
-        "plowed": false
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
-        "building": "chicken_coop",
-        "buildingStartedAt": 1764320007657,
+        "building": null,
+        "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "lastProductCollectedAt": 1764322110248,
-        "plowed": false
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -213,7 +234,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -221,7 +243,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -229,7 +252,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -237,7 +261,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -245,7 +270,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -253,7 +279,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -261,7 +288,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -269,7 +297,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -277,7 +306,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -285,7 +315,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -293,7 +324,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -301,7 +333,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -309,7 +342,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -317,7 +351,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -325,7 +360,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -333,39 +369,44 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
-        "building": "windmill",
-        "buildingStartedAt": 1764321657140,
+        "building": null,
+        "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "lastProductCollectedAt": 1764322113475,
-        "plowed": false
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
-        "building": "windmill",
-        "buildingStartedAt": 1764319281178,
+        "building": null,
+        "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "lastProductCollectedAt": 1764322111884,
-        "plowed": false
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
-        "building": "chicken_coop",
-        "buildingStartedAt": 1764319295975,
+        "building": null,
+        "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "lastProductCollectedAt": 1764322108927,
-        "plowed": false
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
-        "building": "chicken_coop",
-        "buildingStartedAt": 1764320008134,
+        "building": null,
+        "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "lastProductCollectedAt": 1764322109565,
-        "plowed": false
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -375,7 +416,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -383,7 +425,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -391,7 +434,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -399,7 +443,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -407,7 +452,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -415,7 +461,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -423,7 +470,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -431,7 +479,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -439,7 +488,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -447,15 +497,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": "water_well",
-        "buildingStartedAt": 1764321620415,
-        "crop": null,
-        "cropPlantedAt": null,
-        "lastProductCollectedAt": 1764322116917,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -463,15 +506,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": "silo",
-        "buildingStartedAt": 1764321632417,
-        "crop": null,
-        "cropPlantedAt": null,
-        "lastProductCollectedAt": 1764322114827,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -479,7 +515,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -487,7 +524,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -495,7 +533,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -503,7 +542,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -511,7 +551,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -519,7 +560,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -527,7 +569,26 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -537,7 +598,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -545,7 +607,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -553,7 +616,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -561,7 +625,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -569,7 +634,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -577,7 +643,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -585,7 +652,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -593,7 +661,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -601,7 +670,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -609,15 +679,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": "water_well",
-        "buildingStartedAt": 1764321639817,
-        "crop": null,
-        "cropPlantedAt": null,
-        "lastProductCollectedAt": 1764322118146,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -625,7 +688,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -633,7 +697,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -641,7 +706,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -649,7 +715,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -657,7 +724,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -665,7 +733,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -673,15 +742,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": "farmhouse",
-        "buildingStartedAt": 1764321615789,
-        "crop": null,
-        "cropPlantedAt": null,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -689,7 +751,26 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -699,7 +780,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -707,7 +789,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -715,7 +798,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -723,7 +807,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -731,7 +816,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -739,7 +825,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -747,7 +834,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -755,7 +843,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -763,7 +852,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -771,7 +861,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -779,7 +870,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -787,7 +879,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -795,7 +888,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -803,7 +897,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -811,7 +906,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -819,7 +915,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -827,7 +924,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -835,7 +933,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -843,7 +942,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -851,7 +951,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -861,7 +962,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -869,7 +971,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -877,7 +980,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -885,7 +989,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -893,7 +998,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -901,7 +1007,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -909,7 +1016,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -917,7 +1025,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -925,7 +1034,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -933,7 +1043,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -941,7 +1052,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -949,7 +1061,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -957,7 +1070,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -965,7 +1079,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -973,7 +1088,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -981,7 +1097,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -989,7 +1106,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -997,7 +1115,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1005,7 +1124,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1013,7 +1133,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -1023,7 +1144,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1031,7 +1153,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1039,7 +1162,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1047,7 +1171,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1055,7 +1180,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1063,7 +1189,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1071,7 +1198,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1079,7 +1207,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1087,7 +1216,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1095,7 +1225,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1103,7 +1234,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1111,7 +1243,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1119,7 +1252,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1127,7 +1261,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1135,7 +1270,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1143,7 +1279,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1151,7 +1288,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1159,7 +1297,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1167,7 +1306,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1175,7 +1315,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -1185,7 +1326,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1193,7 +1335,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1201,7 +1344,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1209,7 +1353,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1217,7 +1362,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1225,7 +1371,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1233,7 +1380,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1241,7 +1389,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1249,7 +1398,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1257,7 +1407,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1265,7 +1416,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1273,7 +1425,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1281,7 +1434,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1289,7 +1443,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1297,7 +1452,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1305,7 +1461,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1313,7 +1470,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1321,7 +1479,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1329,7 +1488,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1337,7 +1497,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -1347,7 +1508,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1355,7 +1517,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1363,7 +1526,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1371,7 +1535,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1379,7 +1544,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1387,7 +1553,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1395,7 +1562,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1403,7 +1571,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1411,7 +1580,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1419,7 +1589,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1427,7 +1598,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1435,7 +1607,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1443,7 +1616,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1451,7 +1625,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1459,7 +1634,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1467,7 +1643,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1475,7 +1652,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1483,7 +1661,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1491,7 +1670,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1499,7 +1679,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -1509,7 +1690,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1517,7 +1699,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1525,7 +1708,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1533,7 +1717,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1541,7 +1726,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1549,7 +1735,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1557,7 +1744,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1565,7 +1753,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1573,7 +1762,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1581,7 +1771,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1589,7 +1780,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1597,7 +1789,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1605,7 +1798,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1613,7 +1807,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1621,7 +1816,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1629,7 +1825,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1637,7 +1834,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1645,7 +1843,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1653,7 +1852,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1661,7 +1861,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -1671,7 +1872,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1679,7 +1881,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1687,7 +1890,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1695,7 +1899,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1703,7 +1908,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1711,7 +1917,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1719,7 +1926,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1727,7 +1935,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1735,7 +1944,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1743,7 +1953,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1751,7 +1962,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1759,7 +1971,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1767,7 +1980,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1775,7 +1989,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1783,7 +1998,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1791,7 +2007,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1799,7 +2016,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1807,7 +2025,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1815,7 +2034,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1823,7 +2043,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -1833,7 +2054,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1841,7 +2063,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1849,7 +2072,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1857,7 +2081,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1865,7 +2090,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1873,7 +2099,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1881,7 +2108,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1889,7 +2117,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1897,7 +2126,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1905,7 +2135,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1913,7 +2144,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1921,7 +2153,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1929,7 +2162,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1937,7 +2171,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1945,7 +2180,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1953,7 +2189,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1961,7 +2198,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1969,7 +2207,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1977,7 +2216,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -1985,7 +2225,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -1995,7 +2236,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2003,7 +2245,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2011,7 +2254,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2019,7 +2263,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2027,7 +2272,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2035,7 +2281,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2043,7 +2290,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2051,7 +2299,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2059,7 +2308,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2067,7 +2317,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2075,7 +2326,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2083,7 +2335,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2091,7 +2344,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2099,7 +2353,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2107,7 +2362,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2115,7 +2371,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2123,7 +2380,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2131,7 +2389,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2139,7 +2398,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2147,7 +2407,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -2157,7 +2418,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2165,7 +2427,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2173,7 +2436,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2181,7 +2445,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2189,7 +2454,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2197,7 +2463,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2205,7 +2472,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2213,7 +2481,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2221,7 +2490,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2229,7 +2499,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2237,7 +2508,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2245,7 +2517,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2253,7 +2526,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2261,7 +2535,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2269,7 +2544,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2277,7 +2553,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2285,7 +2562,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2293,7 +2571,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2301,7 +2580,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2309,7 +2589,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -2319,7 +2600,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2327,7 +2609,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2335,7 +2618,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2343,7 +2627,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2351,7 +2636,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2359,7 +2645,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2367,7 +2654,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2375,7 +2663,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2383,7 +2672,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2391,7 +2681,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2399,7 +2690,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2407,7 +2699,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2415,7 +2708,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2423,7 +2717,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2431,7 +2726,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2439,7 +2735,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2447,7 +2744,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2455,7 +2753,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2463,7 +2762,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2471,7 +2771,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -2481,7 +2782,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2489,7 +2791,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2497,7 +2800,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2505,7 +2809,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2513,7 +2818,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2521,7 +2827,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2529,7 +2836,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2537,7 +2845,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2545,7 +2854,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2553,7 +2863,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2561,7 +2872,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2569,7 +2881,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2577,7 +2890,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2585,7 +2899,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2593,7 +2908,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2601,7 +2917,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2609,7 +2926,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2617,7 +2935,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2625,7 +2944,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2633,7 +2953,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -2643,7 +2964,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2651,7 +2973,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2659,7 +2982,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2667,7 +2991,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2675,7 +3000,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2683,7 +3009,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2691,7 +3018,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2699,7 +3027,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2707,7 +3036,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2715,7 +3045,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2723,7 +3054,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2731,7 +3063,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2739,7 +3072,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2747,7 +3081,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2755,7 +3090,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2763,7 +3099,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2771,7 +3108,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2779,7 +3117,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2787,7 +3126,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2795,7 +3135,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -2805,7 +3146,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2813,7 +3155,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2821,7 +3164,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2829,7 +3173,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2837,7 +3182,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2845,7 +3191,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2853,7 +3200,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2861,7 +3209,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2869,7 +3218,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2877,7 +3227,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2885,7 +3236,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2893,7 +3245,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2901,7 +3254,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2909,7 +3263,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2917,7 +3272,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2925,7 +3281,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2933,7 +3290,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2941,7 +3299,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2949,7 +3308,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2957,7 +3317,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -2967,7 +3328,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2975,7 +3337,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2983,7 +3346,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2991,7 +3355,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -2999,7 +3364,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3007,7 +3373,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3015,7 +3382,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3023,7 +3391,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3031,7 +3400,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3039,7 +3409,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3047,7 +3418,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3055,7 +3427,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3063,7 +3436,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3071,7 +3445,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3079,7 +3454,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3087,7 +3463,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3095,7 +3472,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3103,7 +3481,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3111,7 +3490,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3119,7 +3499,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ],
     [
@@ -3129,7 +3510,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3137,7 +3519,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3145,7 +3528,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3153,7 +3537,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3161,7 +3546,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3169,7 +3555,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3177,7 +3564,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3185,7 +3573,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3193,7 +3582,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3201,7 +3591,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3209,7 +3600,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3217,7 +3609,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3225,7 +3618,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3233,7 +3627,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3241,7 +3636,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3249,7 +3645,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3257,7 +3654,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3265,7 +3663,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3273,7 +3672,8 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       },
       {
         "building": null,
@@ -3281,43 +3681,61 @@
         "crop": null,
         "cropPlantedAt": null,
         "lastProductCollectedAt": null,
-        "plowed": false
+        "plowed": false,
+        "fertilizedBonus": false
       }
     ]
   ],
-  "xp": 1507,
+  "xp": 0,
+  "inventory": {
+    "eggs": 0,
+    "milk": 0,
+    "grain_pack": 0,
+    "flour": 0,
+    "water": 0,
+    "meal": 0,
+    "toolkit": 0,
+    "fertilizer": 0,
+    "wheat": 0,
+    "corn": 0,
+    "carrot": 0,
+    "potato": 0,
+    "tomato": 0,
+    "pumpkin": 0,
+    "sunflower": 0
+  },
   "tools": {
     "hoe": 100,
     "wateringCan": 100
   },
   "maxEnergy": 100,
-  "energy": 88.09199999999998,
-  "lastEnergyTs": 1764322133194,
+  "energy": 100,
+  "lastEnergyTs": 1764330986459,
   "inventoryCapacity": 100,
   "market": {
-    "lastUpdateTs": 1764322079738,
+    "lastUpdateTs": 1764330969489,
     "multipliers": {
-      "eggs": 1.05,
-      "milk": 1.1,
-      "grain_pack": 1.01,
-      "flour": 1.03,
-      "water": 1.13,
-      "meal": 1.02,
-      "toolkit": 0.9,
-      "wheat": 1.02,
-      "corn": 0.99,
-      "carrot": 0.98,
-      "potato": 0.95,
-      "tomato": 1.06,
-      "pumpkin": 0.93,
-      "sunflower": 1.06
+      "eggs": 1,
+      "milk": 1,
+      "grain_pack": 1,
+      "flour": 1,
+      "water": 1,
+      "meal": 1,
+      "toolkit": 1,
+      "wheat": 1,
+      "corn": 1,
+      "carrot": 1,
+      "potato": 1,
+      "tomato": 1,
+      "pumpkin": 1,
+      "sunflower": 1
     }
   },
-  "timeOfDay": 0.7769197974865127,
-  "lastTimeTs": 1764322133197,
-  "seasonIndex": 0,
-  "season": "Lente",
-  "weather": "Regen",
-  "lastSeasonTs": 1764321978538,
-  "lastWeatherTs": 1764322128699
+  "timeOfDay": 0.944529762414742,
+  "lastTimeTs": 1764330986460,
+  "seasonIndex": 1,
+  "season": "Zomer",
+  "weather": "Helder",
+  "lastSeasonTs": 1764330969489,
+  "lastWeatherTs": 1764330969489
 }

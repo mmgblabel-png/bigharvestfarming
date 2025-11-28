@@ -21,6 +21,10 @@
       <div class="hud-item">
         ⛅ Weer: <span id="hud-weather">Helder</span>
       </div>
+      <div class="hud-item" title="Gemiddelde markttrend">
+        📈 Markt: <span id="hud-market-trend">→ ×1.00</span>
+        <canvas id="hud-market-spark" width="80" height="16" aria-hidden="true" style="vertical-align: middle; margin-left: 6px;"></canvas>
+      </div>
       <div class="hud-item xp-bar">
         <div class="xp-label">
           XP: <span id="hud-xp">0</span>/<span id="hud-xp-next">100</span>
@@ -39,6 +43,11 @@
       </div>
     </div>
     <div class="hud-right">
+      <div class="hud-item">
+        👤 Profiel:
+        <input id="profile-input" type="text" placeholder="default" size="10" />
+        <button id="profile-apply" title="Profiel laden">Laden</button>
+      </div>
       <div class="hud-item">
         Actie:
         <span id="hud-action-label">Geen</span>
@@ -73,7 +82,15 @@
         <span id="tools-indicator" title="Duurzaamheid gereedschap"></span>
         <button id="btn-harvest-all" title="Oogst alle rijpe gewassen">🌾 Oogst Alles</button>
         <button id="btn-collect-all" title="Verzamel alle gereedstaande producten">📦 Verzamelen Alles</button>
+        <button id="btn-undo" title="Maak laatste actie ongedaan (Ctrl+Z)">↩️ Ongedaan maken</button>
         <button id="btn-open-shop" title="Open winkel (S)">🛒 Winkel</button>
+        <button id="btn-open-help" title="Toon hulp (F1 of ?)">❓ Help</button>
+        <button id="btn-eat-meal" title="Consumeer maaltijd voor energie">🍽️ Eet Maaltijd</button>
+        <button id="btn-auto-harvest" title="Automatisch rijpe gewassen oogsten">🤖 Auto Oogst: Uit</button>
+        <button id="btn-auto-collect" title="Automatisch producten verzamelen">🤖 Auto Verzamelen: Uit</button>
+        <button id="btn-reduced-motion" title="Animaties aan/uit voor performance / toegankelijkheid">🌀 Animaties: Aan</button>
+        <button id="btn-high-contrast" title="Hoog contrast modus aan/uit">🌓 Contrast: Uit</button>
+        <button id="btn-toggle-coords" title="Toon tegelcoördinaten aan/uit">📐 Coords: Uit</button>
       </div>
     </div>
     <div class="toolbar-section">
@@ -103,6 +120,9 @@
 
   <div id="main">
     <div id="farm-wrapper">
+      <div id="horizon-back" aria-hidden="true"></div>
+      <div id="horizon-front" aria-hidden="true"></div>
+      <div id="stars-overlay" aria-hidden="true"></div>
       <div id="time-overlay" aria-hidden="true"></div>
       <div id="weather-overlay" aria-hidden="true"></div>
       <div id="farm-grid">
@@ -117,6 +137,10 @@
       <h2>Inventaris</h2>
       <div id="inventory-list">
         <!-- Inventaris wordt door game.js gerenderd -->
+      </div>
+      <h2>Statistieken</h2>
+      <div id="stats-list" aria-live="polite">
+        <!-- Statistieken worden door game.js gerenderd -->
       </div>
     </aside>
   </div>
@@ -134,6 +158,54 @@
       </div>
       <div class="modal-body" id="shop-body">
         <!-- Gevuld door game.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Help modal -->
+  <div id="help-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="help-title">
+    <div class="modal-backdrop" data-close="help"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="help-title">❓ Hulp & Tips</h3>
+        <button class="modal-close" data-close="help" title="Sluiten">✖</button>
+      </div>
+      <div class="modal-body" id="help-body">
+        <div>
+          <strong>Besturing</strong>
+          <ul>
+            <li><code>1-9</code>: Gewassen kiezen · <code>Alt+1-9</code>: Gebouwen</li>
+            <li><code>H</code>: Oogsten · <code>Shift+H</code>: Alles oogsten</li>
+            <li><code>C</code>: Verzamelen · <code>Shift+C</code>: Alles verzamelen</li>
+            <li><code>P</code>: Ploegen · <code>W</code>: Water geven · <code>F</code>: Bemesten</li>
+            <li><code>S</code>: Winkel openen/sluiten</li>
+            <li><code>Esc</code>: Actie annuleren</li>
+            <li><code>F1</code> of <code>?</code>: Deze hulp</li>
+          </ul>
+        </div>
+        <div>
+          <strong>Profielen & Opslaan</strong>
+          <ul>
+            <li>Gebruik het veld <em>Profiel</em> in de HUD en klik <em>Laden</em> om te wisselen.</li>
+            <li>Elke naam bewaart apart onder <code>saves/&lt;profiel&gt;.json</code>.</li>
+            <li>Er wordt automatisch opgeslagen na acties (indicatie: 💾).</li>
+          </ul>
+        </div>
+        <div>
+          <strong>Seizoenen & Weer</strong>
+          <ul>
+            <li>Seizoenen beïnvloeden groeisnelheid en beschikbare gewassen.</li>
+            <li>Regen versnelt groei en spaart water; sneeuw vertraagt productie.</li>
+          </ul>
+        </div>
+        <div>
+          <strong>Tips</strong>
+          <ul>
+            <li>Let op de marktprijs-indicatoren bij verkopen en in de winkel.</li>
+            <li>Gebruik bemesting en water om groei te versnellen.</li>
+            <li>Repareer gereedschap met een toolkit of munten.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

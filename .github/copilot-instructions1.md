@@ -1,3 +1,5 @@
+# Copilot Instructions for Big Harvest Farming
+
 You are building **Big Harvest Farming**, a farm game inspired by:
 - Goodgame Big Farm
 - Stardew Valley
