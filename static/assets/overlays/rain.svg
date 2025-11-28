@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8ecae6" stop-opacity="0.0"/>
+      <stop offset="1" stop-color="#219ebc" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="none"/>
+  <g stroke="url(#g)" stroke-width="2" stroke-linecap="round">
+    <path d="M20 -10 l-20 40"/>
+    <path d="M80 -20 l-20 40"/>
+    <path d="M140 -5 l-20 40"/>
+    <path d="M200 -25 l-20 40"/>
+    <path d="M260 -15 l-20 40"/>
+
+    <path d="M50 60 l-20 40"/>
+    <path d="M110 50 l-20 40"/>
+    <path d="M170 65 l-20 40"/>
+    <path d="M230 45 l-20 40"/>
+
+    <path d="M20 130 l-20 40"/>
+    <path d="M80 120 l-20 40"/>
+    <path d="M140 135 l-20 40"/>
+    <path d="M200 115 l-20 40"/>
+    <path d="M260 125 l-20 40"/>
+
+    <path d="M50 200 l-20 40"/>
+    <path d="M110 190 l-20 40"/>
+    <path d="M170 205 l-20 40"/>
+    <path d="M230 185 l-20 40"/>
+  </g>
+</svg>

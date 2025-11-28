@@ -1,3 +1,14 @@
+/* CSS Variables */
+:root {
+  --farm-green: #5ca238;
+  --farm-green-dark: #3e7a28;
+  --farm-brown: #8d6e63;
+  --farm-accent: #ffeb3b;
+  --ui-bg: #f0f7e8;
+  --panel-bg: #ffffff;
+  --text-dark: #234018;
+}
+
 /* Algemene layout */
 
 * {
@@ -10,7 +21,7 @@
 
 body {
   background: #e2f3da;
-  color: #234018;
+  color: var(--text-dark);
 }
 
 /* HUD */
@@ -20,7 +31,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
-  background: linear-gradient(to right, #3e7a28, #5ca238);
+  background: linear-gradient(to right, var(--farm-green-dark), var(--farm-green));
   color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
@@ -61,13 +72,19 @@ body {
   transition: width 0.2s linear;
 }
 
+/* Energy bar */
+.energy-bar { display: flex; flex-direction: column; gap: 4px; }
+.energy-label { font-size: 12px; }
+.energy-bar-outer { width: 140px; height: 10px; border-radius: 999px; background: rgba(255,255,255,0.3); overflow: hidden; }
+.energy-bar-inner { height: 100%; width: 0%; background: #80deea; transition: width 0.2s linear; }
+
 /* Toolbar */
 
 #toolbar {
   display: flex;
   gap: 16px;
   padding: 8px 16px;
-  background: #f0f7e8;
+  background: var(--ui-bg);
   border-bottom: 1px solid #c4d6b1;
 }
 
@@ -88,6 +105,29 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+}
+
+#save-indicator {
+  align-self: center;
+  font-size: 12px;
+  color: #557a3a;
+  opacity: 0.8;
+}
+
+#save-indicator.saving {
+  opacity: 1;
+}
+
+#save-indicator.saved::after {
+  content: " ✔";
+  color: #2e7d32;
+}
+
+#tools-indicator {
+  align-self: center;
+  font-size: 12px;
+  padding-left: 6px;
+  color: #224a1a;
 }
 
 button {
@@ -113,7 +153,7 @@ button:active {
 button.action-selected,
 button.crop-selected,
 button.building-selected {
-  background: #ffeb3b;
+  background: var(--farm-accent);
 }
 
 /* Locked items */
@@ -148,6 +188,7 @@ button.locked::after {
   border-radius: 12px;
   border: 1px solid #aecd8f;
   padding: 10px;
+  position: relative;
 }
 
 #farm-grid {
@@ -157,35 +198,77 @@ button.locked::after {
   gap: 2px;
 }
 
+#time-overlay {
+  position: absolute;
+  inset: 8px 8px 8px 8px; /* roughly cover inside padding */
+  border-radius: 10px;
+  pointer-events: none;
+  background: radial-gradient(120% 120% at 50% 30%, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  opacity: 0; /* controlled by JS */
+  z-index: 1;
+}
+
+#weather-overlay {
+  position: absolute;
+  inset: 8px 8px 8px 8px;
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 2; /* above time overlay */
+  overflow: hidden;
+}
+
+.weather-rain, .weather-snow { position: absolute; left: 0; top: 0; right: 0; bottom: 0; }
+.weather-rain { background-image: url('/static/assets/overlays/rain.svg'); background-size: 256px 256px; opacity: 0.5; animation: rainMove 1.2s linear infinite; }
+.weather-snow { background-image: url('/static/assets/overlays/snow.svg'); background-size: 256px 256px; opacity: 0.7; animation: snowDrift 6s linear infinite; }
+
+@keyframes rainMove { from { background-position: 0 0; } to { background-position: -128px 256px; } }
+@keyframes snowDrift { from { background-position: 0 0; } to { background-position: 64px 128px; } }
+
 .tile {
   width: 32px;
   height: 32px;
   border-radius: 6px;
   background: #9ccc65;
+  border: 1px solid rgba(0,0,0,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
   cursor: pointer;
   position: relative;
+  transition: filter 0.1s ease, transform 0.06s ease;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Tile states */
 
 .tile-empty {
-  background: #aed581;
+  background: radial-gradient(circle at 25% 20%, #b7e08d 0 30%, #aed581 31% 100%);
+}
+
+.tile-plowed {
+  background: repeating-linear-gradient(
+    45deg,
+    #a57959,
+    #a57959 6px,
+    #996c4f 6px,
+    #996c4f 10px
+  );
 }
 
 .tile-crop-growing {
-  background: #8bc34a;
+  background: linear-gradient(180deg, #8bc34a 0%, #7fb949 100%);
 }
 
 .tile-crop-ready {
-  background: #ffeb3b;
+  background: var(--farm-accent);
+  animation: readyGlow 1.2s ease-in-out infinite alternate;
 }
 
 .tile-building {
-  background: #8d6e63;
+  background: var(--farm-brown);
 }
 
 /* Kleine indicator (bv. product ready) */
@@ -197,12 +280,82 @@ button.locked::after {
   font-size: 12px;
 }
 
+/* Overlay animal sprite */
+.tile-animal {
+  position: absolute;
+  left: 2px;
+  bottom: 2px;
+  width: 14px;
+  height: 14px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: animalBob 1.6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes animalBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1px); }
+}
+
+/* Windmill blades overlay */
+.tile-overlay-blades {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: bladesSpin 3.5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes bladesSpin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Water well ripple overlay */
+.tile-overlay-ripple {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: ripplePulse 2.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes ripplePulse {
+  0% { opacity: 0.0; transform: translate(-50%, -50%) scale(0.8); }
+  25% { opacity: 0.5; }
+  50% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+  100% { opacity: 0.0; transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.tile:hover {
+  filter: brightness(1.05);
+}
+
+@keyframes readyGlow {
+  from { box-shadow: 0 0 0 rgba(255, 235, 59, 0.0); }
+  to { box-shadow: 0 0 8px rgba(255, 235, 59, 0.8); }
+}
+
 /* Quest panel */
 
 #quest-panel {
   width: 260px;
   max-height: calc(100vh - 150px);
-  background: #ffffff;
+  background: var(--panel-bg);
   border-radius: 12px;
   border: 1px solid #c4d6b1;
   padding: 10px;
@@ -221,6 +374,24 @@ button.locked::after {
   flex-direction: column;
   gap: 8px;
   overflow-y: auto;
+}
+
+#inventory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.inv-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: #f8fbf1;
+  border: 1px solid #e0eacd;
 }
 
 .quest-card {
@@ -250,6 +421,43 @@ button.locked::after {
   background: #e0ffe3;
   border-color: #7cb342;
 }
+
+/* Toast notifications */
+#toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  background: rgba(35, 64, 24, 0.95);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  font-size: 13px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+#toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+/* Modal */
+.modal.hidden { display: none; }
+.modal { position: fixed; inset: 0; z-index: 1000; }
+.modal-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.35); }
+.modal-content { position: relative; margin: 6vh auto; width: min(560px, 92vw); background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); overflow: hidden; }
+.modal-header { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; background: var(--ui-bg); border-bottom: 1px solid #dcead0; }
+.modal-body { padding: 10px 12px; display: grid; gap: 10px; }
+.modal-close { background: transparent; color: #3b3b3b; padding: 6px 8px; border-radius: 8px; }
+.modal-close:hover { background: #eee; }
+
+.shop-row { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 8px; padding: 8px; border: 1px solid #e3edd8; border-radius: 10px; background: #f9fcf4; }
+.shop-title { font-weight: 600; }
+.shop-price { font-size: 12px; color: #2f5a18; }
+.shop-buy { background: #e3f2d1; }
 
 /* Responsive */
 

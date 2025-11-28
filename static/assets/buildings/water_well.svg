@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a47147"/>
+      <stop offset="100%" stop-color="#7a5336"/>
+    </linearGradient>
+    <radialGradient id="water" cx="0.5" cy="0.6" r="0.5">
+      <stop offset="0%" stop-color="#b3e5fc"/>
+      <stop offset="100%" stop-color="#4fc3f7"/>
+    </radialGradient>
+  </defs>
+  <rect x="18" y="18" width="4" height="22" fill="url(#wood)" stroke="#5d4037"/>
+  <rect x="42" y="18" width="4" height="22" fill="url(#wood)" stroke="#5d4037"/>
+  <rect x="18" y="18" width="28" height="6" fill="url(#wood)" stroke="#5d4037"/>
+  <ellipse cx="32" cy="38" rx="12" ry="8" fill="url(#water)" stroke="#0288d1"/>
+</svg>

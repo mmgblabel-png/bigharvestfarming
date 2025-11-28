@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="shedWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="100%" stop-color="#c7c7c7"/>
+    </linearGradient>
+    <linearGradient id="shedRoof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9e6a44"/>
+      <stop offset="100%" stop-color="#7a5336"/>
+    </linearGradient>
+  </defs>
+  <polygon points="32,16 12,28 52,28" fill="url(#shedRoof)" stroke="#5d4037"/>
+  <rect x="14" y="28" width="36" height="22" rx="4" fill="url(#shedWall)" stroke="#757575"/>
+  <rect x="28" y="34" width="8" height="16" fill="#6d4c41" stroke="#4e342e"/>
+</svg>

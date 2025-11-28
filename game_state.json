@@ -1,0 +1,3323 @@
+{
+  "inventory": {
+    "carrot": 0,
+    "corn": 0,
+    "eggs": 0,
+    "flour": 0,
+    "grain_pack": 0,
+    "meal": 0,
+    "milk": 0,
+    "potato": 0,
+    "pumpkin": 0,
+    "sunflower": 0,
+    "tomato": 0,
+    "toolkit": 3,
+    "water": 0,
+    "wheat": 0,
+    "fertilizer": 0
+  },
+  "money": 617,
+  "quests": [
+    {
+      "completed": true,
+      "id": "plant_wheat_10",
+      "progress": 10,
+      "rewardClaimed": true
+    },
+    {
+      "completed": true,
+      "id": "harvest_wheat_10",
+      "progress": 10,
+      "rewardClaimed": true
+    },
+    {
+      "completed": true,
+      "id": "build_chicken_coop_1",
+      "progress": 1,
+      "rewardClaimed": true
+    },
+    {
+      "completed": true,
+      "id": "collect_eggs_5",
+      "progress": 5,
+      "rewardClaimed": true
+    }
+  ],
+  "tiles": [
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": "pumpkin",
+        "cropPlantedAt": 1764321530850,
+        "lastProductCollectedAt": null,
+        "plowed": true
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": "storage_shed",
+        "buildingStartedAt": 1764319384400,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": 1764321463527,
+        "plowed": false
+      },
+      {
+        "building": "silo",
+        "buildingStartedAt": 1764319856998,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": 1764321465029,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": "chicken_coop",
+        "buildingStartedAt": 1764319672538,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": 1764321542696,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": "chicken_coop",
+        "buildingStartedAt": 1764320006884,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": 1764321544994,
+        "plowed": false
+      },
+      {
+        "building": "chicken_coop",
+        "buildingStartedAt": 1764320007657,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": 1764321547512,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": "sunflower",
+        "cropPlantedAt": 1764321511226,
+        "lastProductCollectedAt": null,
+        "plowed": true
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": "sunflower",
+        "cropPlantedAt": 1764321512286,
+        "lastProductCollectedAt": null,
+        "plowed": true
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": "tomato",
+        "cropPlantedAt": 1764321515110,
+        "lastProductCollectedAt": null,
+        "plowed": true
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": "tomato",
+        "cropPlantedAt": 1764321515942,
+        "lastProductCollectedAt": null,
+        "plowed": true
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": "carrot",
+        "cropPlantedAt": 1764321518698,
+        "lastProductCollectedAt": null,
+        "plowed": true
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": "potato",
+        "cropPlantedAt": 1764321522361,
+        "lastProductCollectedAt": null,
+        "plowed": true
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": "pumpkin",
+        "cropPlantedAt": 1764321559478,
+        "lastProductCollectedAt": null,
+        "plowed": true
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": "windmill",
+        "buildingStartedAt": 1764321657140,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": "windmill",
+        "buildingStartedAt": 1764319281178,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": 1764321450224,
+        "plowed": false
+      },
+      {
+        "building": "chicken_coop",
+        "buildingStartedAt": 1764319295975,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": 1764321545841,
+        "plowed": false
+      },
+      {
+        "building": "chicken_coop",
+        "buildingStartedAt": 1764320008134,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": 1764321546597,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": "water_well",
+        "buildingStartedAt": 1764321620415,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": "silo",
+        "buildingStartedAt": 1764321632417,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": "water_well",
+        "buildingStartedAt": 1764321639817,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": "farmhouse",
+        "buildingStartedAt": 1764321615789,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null,
+        "plowed": false
+      }
+    ]
+  ],
+  "xp": 1077,
+  "tools": {
+    "hoe": 86,
+    "wateringCan": 100
+  },
+  "maxEnergy": 100,
+  "energy": 55.00099999999994,
+  "lastEnergyTs": 1764321665205,
+  "inventoryCapacity": 100,
+  "market": {
+    "lastUpdateTs": 1764321607201,
+    "multipliers": {
+      "eggs": 1.01,
+      "milk": 1.06,
+      "grain_pack": 1.04,
+      "flour": 1.04,
+      "water": 0.98,
+      "meal": 1,
+      "toolkit": 0.93,
+      "wheat": 0.97,
+      "corn": 1,
+      "carrot": 1.02,
+      "potato": 1.04,
+      "tomato": 0.98,
+      "pumpkin": 1.04,
+      "sunflower": 0.99
+    }
+  },
+  "timeOfDay": 0.8770114641531785,
+  "lastTimeTs": 1764321665208,
+  "seasonIndex": 2,
+  "season": "Herfst",
+  "weather": "Helder",
+  "lastSeasonTs": 1764321606698,
+  "lastWeatherTs": 1764321621205
+}

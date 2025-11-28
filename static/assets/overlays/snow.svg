@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <rect width="256" height="256" fill="none"/>
+  <g fill="#ffffff" fill-opacity="0.9">
+    <circle cx="20" cy="20" r="1.6"/>
+    <circle cx="60" cy="30" r="1.2"/>
+    <circle cx="100" cy="18" r="1.8"/>
+    <circle cx="140" cy="26" r="1.4"/>
+    <circle cx="180" cy="16" r="1.5"/>
+    <circle cx="220" cy="22" r="1.3"/>
+
+    <circle cx="35" cy="80" r="1.4"/>
+    <circle cx="75" cy="90" r="1.1"/>
+    <circle cx="115" cy="78" r="1.7"/>
+    <circle cx="155" cy="86" r="1.3"/>
+    <circle cx="195" cy="76" r="1.5"/>
+    <circle cx="235" cy="82" r="1.2"/>
+
+    <circle cx="20" cy="140" r="1.6"/>
+    <circle cx="60" cy="150" r="1.2"/>
+    <circle cx="100" cy="138" r="1.8"/>
+    <circle cx="140" cy="146" r="1.4"/>
+    <circle cx="180" cy="136" r="1.5"/>
+    <circle cx="220" cy="142" r="1.3"/>
+
+    <circle cx="35" cy="200" r="1.4"/>
+    <circle cx="75" cy="210" r="1.1"/>
+    <circle cx="115" cy="198" r="1.7"/>
+    <circle cx="155" cy="206" r="1.3"/>
+    <circle cx="195" cy="196" r="1.5"/>
+    <circle cx="235" cy="202" r="1.2"/>
+  </g>
+</svg>

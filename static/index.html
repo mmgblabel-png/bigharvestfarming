@@ -15,6 +15,12 @@
       <div class="hud-item">
         ⭐ Level: <span id="hud-level">1</span>
       </div>
+      <div class="hud-item">
+        🗓️ Seizoen: <span id="hud-season">Zomer</span>
+      </div>
+      <div class="hud-item">
+        ⛅ Weer: <span id="hud-weather">Helder</span>
+      </div>
       <div class="hud-item xp-bar">
         <div class="xp-label">
           XP: <span id="hud-xp">0</span>/<span id="hud-xp-next">100</span>
@@ -23,11 +29,22 @@
           <div class="xp-bar-inner" id="hud-xp-bar"></div>
         </div>
       </div>
+      <div class="hud-item energy-bar">
+        <div class="energy-label">
+          ⚡ Energie: <span id="hud-energy">0</span>/<span id="hud-energy-max">100</span>
+        </div>
+        <div class="energy-bar-outer">
+          <div class="energy-bar-inner" id="hud-energy-bar"></div>
+        </div>
+      </div>
     </div>
     <div class="hud-right">
       <div class="hud-item">
         Actie:
         <span id="hud-action-label">Geen</span>
+      </div>
+      <div class="hud-item">
+        🗄️ Opslag: <span id="hud-storage-used">0</span>/<span id="hud-storage-cap">0</span>
       </div>
     </div>
   </div>
@@ -46,8 +63,31 @@
       </div>
     </div>
     <div class="toolbar-section">
+      <h2>Systeem</h2>
+      <div class="toolbar-buttons">
+        <button id="btn-reset">🔄 Reset spel</button>
+        <span id="save-indicator" title="Opslaan status">💾 Opslaan...</span>
+        <button id="btn-mute" title="Geluid aan/uit">🔊 Geluid</button>
+        <button id="btn-sell-products" title="Verkoop alle producten">💸 Verkoop producten</button>
+        <button id="btn-repair" title="Repareer gereedschap">🧰 Repareer</button>
+        <span id="tools-indicator" title="Duurzaamheid gereedschap"></span>
+        <button id="btn-harvest-all" title="Oogst alle rijpe gewassen">🌾 Oogst Alles</button>
+        <button id="btn-collect-all" title="Verzamel alle gereedstaande producten">📦 Verzamelen Alles</button>
+        <button id="btn-open-shop" title="Open winkel (S)">🛒 Winkel</button>
+      </div>
+    </div>
+    <div class="toolbar-section">
       <h2>Acties</h2>
       <div class="toolbar-buttons">
+        <button class="action-btn" data-action="plow">
+          🪓 Ploegen
+        </button>
+        <button class="action-btn" data-action="water">
+          💧 Water geven
+        </button>
+        <button class="action-btn" data-action="fertilize">
+          🧪 Bemesten
+        </button>
         <button class="action-btn" data-action="harvest">
           🌾 Oogsten
         </button>
@@ -63,6 +103,8 @@
 
   <div id="main">
     <div id="farm-wrapper">
+      <div id="time-overlay" aria-hidden="true"></div>
+      <div id="weather-overlay" aria-hidden="true"></div>
       <div id="farm-grid">
         <!-- Tegels worden door game.js gemaakt -->
       </div>
@@ -72,7 +114,28 @@
       <div id="quest-list">
         <!-- Missies worden door game.js gerenderd -->
       </div>
+      <h2>Inventaris</h2>
+      <div id="inventory-list">
+        <!-- Inventaris wordt door game.js gerenderd -->
+      </div>
     </aside>
+  </div>
+
+  <!-- Feedback/notifications -->
+  <div id="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Shop modal -->
+  <div id="shop-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="shop-title">
+    <div class="modal-backdrop" data-close="shop"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="shop-title">🛒 Dorpswinkel</h3>
+        <button class="modal-close" data-close="shop" title="Sluiten">✖</button>
+      </div>
+      <div class="modal-body" id="shop-body">
+        <!-- Gevuld door game.js -->
+      </div>
+    </div>
   </div>
 
   <script src="/static/game.js" defer></script>

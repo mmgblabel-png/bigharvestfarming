@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect rx="8" ry="8" width="64" height="64" fill="#f6c453"/>
+  <circle cx="32" cy="36" r="14" fill="#d68b00"/>
+  <text x="32" y="18" font-size="12" text-anchor="middle" fill="#5d4037" font-family="Segoe UI, sans-serif">Wheat</text>
+</svg>

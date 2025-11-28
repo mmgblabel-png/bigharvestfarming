@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="siloGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e0e0e0"/>
+      <stop offset="100%" stop-color="#bdbdbd"/>
+    </linearGradient>
+  </defs>
+  <rect x="22" y="14" width="20" height="36" rx="8" fill="url(#siloGrad)" stroke="#757575"/>
+  <rect x="26" y="26" width="12" height="8" fill="#cfd8dc" stroke="#90a4ae"/>
+</svg>

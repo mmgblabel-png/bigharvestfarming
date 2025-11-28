@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="barnWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe0b2"/>
+      <stop offset="100%" stop-color="#ffcc80"/>
+    </linearGradient>
+    <linearGradient id="barnRoof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a86a3f"/>
+      <stop offset="100%" stop-color="#7b5032"/>
+    </linearGradient>
+  </defs>
+  <polygon points="32,10 8,24 56,24" fill="url(#barnRoof)" stroke="#5d4037"/>
+  <rect x="10" y="24" width="44" height="28" rx="4" fill="url(#barnWall)" stroke="#8d6e63"/>
+  <rect x="18" y="28" width="10" height="8" fill="#90caf9" stroke="#455a64"/>
+  <rect x="36" y="28" width="10" height="8" fill="#90caf9" stroke="#455a64"/>
+  <rect x="28" y="34" width="8" height="18" fill="#6d4c41" stroke="#4e342e"/>
+</svg>

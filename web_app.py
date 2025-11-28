@@ -65,5 +65,21 @@ def api_post_state():
     return jsonify({"status": "ok"})
 
 
+@app.get("/api/health")
+def api_health():
+    try:
+        _ = load_state()
+        return jsonify({"status": "ok"}), 200
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
+
+
+@app.post("/api/reset")
+def api_reset():
+    state = default_state()
+    save_state(state)
+    return jsonify({"status": "ok", "state": state}), 200
+
+
 if __name__ == "__main__":
     app.run(debug=True)

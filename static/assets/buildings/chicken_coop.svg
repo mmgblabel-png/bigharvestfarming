@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0e6e1"/>
+      <stop offset="100%" stop-color="#d7ccc8"/>
+    </linearGradient>
+    <linearGradient id="roof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b0724a"/>
+      <stop offset="100%" stop-color="#8d5a38"/>
+    </linearGradient>
+  </defs>
+  <polygon points="32,12 10,26 54,26" fill="url(#roof)" stroke="#5d4037"/>
+  <rect x="12" y="26" width="40" height="24" rx="3" fill="url(#wall)" stroke="#8d6e63"/>
+  <rect x="26" y="34" width="12" height="16" rx="2" fill="#5d4037" stroke="#4e342e"/>
+  <rect x="16" y="30" width="8" height="6" fill="#90caf9" stroke="#546e7a"/>
+  <rect x="40" y="30" width="8" height="6" fill="#90caf9" stroke="#546e7a"/>
+</svg>

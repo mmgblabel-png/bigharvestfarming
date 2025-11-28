@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="houseWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fff3e0"/>
+      <stop offset="100%" stop-color="#ffe0b2"/>
+    </linearGradient>
+    <linearGradient id="houseRoof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#b0724a"/>
+      <stop offset="100%" stop-color="#8d5a38"/>
+    </linearGradient>
+  </defs>
+  <polygon points="32,14 8,28 56,28" fill="url(#houseRoof)" stroke="#5d4037"/>
+  <rect x="12" y="28" width="40" height="24" rx="4" fill="url(#houseWall)" stroke="#8d6e63"/>
+  <rect x="18" y="32" width="10" height="8" fill="#90caf9" stroke="#546e7a"/>
+  <rect x="36" y="32" width="10" height="8" fill="#90caf9" stroke="#546e7a"/>
+  <rect x="28" y="36" width="8" height="16" fill="#6d4c41" stroke="#4e342e"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8e8e8"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="34" cy="38" rx="18" ry="14" fill="url(#bodyGrad)" stroke="#c8c8c8"/>
+    <circle cx="24" cy="30" r="8" fill="url(#bodyGrad)" stroke="#c8c8c8"/>
+    <circle cx="26.5" cy="28.5" r="1.6" fill="#222"/>
+    <path d="M22 26 q2 -4 6 -2" stroke="#e53935" stroke-width="2"/>
+    <path d="M20 33 l-6 3" stroke="#fdd835" stroke-width="3"/>
+    <path d="M26 48 l-5 8" stroke="#ff7043" stroke-width="3"/>
+    <path d="M39 48 l5 8" stroke="#ff7043" stroke-width="3"/>
+  </g>
+</svg>
