@@ -80,7 +80,7 @@ docker run -p 8000:8000 -v ${PWD}\saves:/app/saves big-harvest-farming
 - Seasonal filters: applied to `#farm-wrapper` (`season-spring|summer|autumn|winter` classes) adjusting hue/saturation.
 
 ## Environment
-- `BHF_STATE_FILE` (optional): fully qualified JSON file path to use for saving/loading (primarily for tests or single-save deployments). When set, it overrides profile-based paths.
+- `BHF_STATE_FILE` (optional): fully qualified JSON file path for single-save deployments. Used only when no `profile` is provided in the request.
 - Saves directory: when using profiles, files are stored under `saves/{profile}.json`. The directory is created as needed.
 
 ## Accessibility

@@ -1,94 +1,6 @@
 {
-  "energy": 45.62350000000003,
-  "inventory": {
-    "carrot": 0,
-    "corn": 0,
-    "eggs": 0,
-    "fertilizer": 0,
-    "flour": 0,
-    "grain_pack": 0,
-    "meal": 0,
-    "milk": 0,
-    "potato": 0,
-    "pumpkin": 0,
-    "sunflower": 0,
-    "tomato": 0,
-    "toolkit": 0,
-    "water": 0,
-    "wheat": 12
-  },
-  "inventoryCapacity": 100,
-  "lastEnergyTs": 1764348743553,
-  "lastSeasonTs": 1764348741551,
-  "lastTimeTs": 1764348743556,
-  "lastWeatherTs": 1764348705546,
-  "market": {
-    "lastUpdateTs": 1764348742548,
-    "multipliers": {
-      "carrot": 0.99,
-      "corn": 1.02,
-      "eggs": 1.04,
-      "flour": 1.11,
-      "grain_pack": 0.95,
-      "meal": 1.07,
-      "milk": 0.97,
-      "potato": 0.93,
-      "pumpkin": 0.96,
-      "sunflower": 0.93,
-      "tomato": 0.99,
-      "toolkit": 1.06,
-      "water": 1.08,
-      "wheat": 0.95
-    }
-  },
-  "maxEnergy": 100,
-  "money": 294,
-  "quests": [
-    {
-      "completed": true,
-      "id": "plant_wheat_10",
-      "progress": 10,
-      "rewardClaimed": true
-    },
-    {
-      "completed": true,
-      "id": "harvest_wheat_10",
-      "progress": 10,
-      "rewardClaimed": false
-    },
-    {
-      "completed": false,
-      "id": "build_chicken_coop_1",
-      "progress": 0,
-      "rewardClaimed": false
-    },
-    {
-      "completed": false,
-      "id": "collect_eggs_5",
-      "progress": 0,
-      "rewardClaimed": false
-    },
-    {
-      "completed": false,
-      "id": "harvest_corn_5",
-      "progress": 0,
-      "rewardClaimed": false
-    },
-    {
-      "completed": false,
-      "id": "build_windmill_1",
-      "progress": 0,
-      "rewardClaimed": false
-    },
-    {
-      "completed": false,
-      "id": "collect_milk_5",
-      "progress": 0,
-      "rewardClaimed": false
-    }
-  ],
-  "season": "Winter",
-  "seasonIndex": 3,
+  "money": 500,
+  "quests": [],
   "tiles": [
     [
       {
@@ -96,180 +8,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": "water_well",
-        "buildingStartedAt": 1764348704897,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -278,362 +150,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      }
-    ],
-    [
-      {
-        "building": "water_well",
-        "buildingStartedAt": 1764348710523,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": true
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": true
-      },
-      {
-        "building": "water_well",
-        "buildingStartedAt": 1764348717341,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": true
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": true
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": true
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": true
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
-      },
-      {
-        "building": null,
-        "buildingStartedAt": null,
-        "crop": null,
-        "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -642,180 +292,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": true
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": true
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": true
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": true
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": true
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": true
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -824,180 +434,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -1006,180 +576,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -1188,180 +718,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -1370,180 +860,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -1552,180 +1002,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -1734,180 +1144,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -1916,180 +1286,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -2098,180 +1428,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -2280,180 +1570,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -2462,180 +1712,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -2644,180 +1854,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -2826,180 +1996,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -3008,180 +2138,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -3190,180 +2280,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -3372,180 +2422,140 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       }
     ],
     [
@@ -3554,201 +2564,284 @@
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
       },
       {
         "building": null,
         "buildingStartedAt": null,
         "crop": null,
         "cropPlantedAt": null,
-        "fertilizedBonus": false,
-        "lastProductCollectedAt": null,
-        "plowed": false
+        "lastProductCollectedAt": null
+      }
+    ],
+    [
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
+      },
+      {
+        "building": null,
+        "buildingStartedAt": null,
+        "crop": null,
+        "cropPlantedAt": null,
+        "lastProductCollectedAt": null
       }
     ]
   ],
-  "timeOfDay": 0.9203297624147391,
-  "tools": {
-    "hoe": 76,
-    "wateringCan": 100
-  },
-  "weather": "Storm",
-  "xp": 178,
-  "stats": {
-    "cropsPlanted": 12,
-    "cropsHarvested": 12,
-    "productsCollected": 0,
-    "buildingsConstructed": 3,
-    "productsProcessed": 0,
-    "moneyEarned": 288
-  },
-  "version": 1,
-  "lastActiveTs": 1764348743563,
-  "settings": {
-    "showCoords": false
-  }
+  "xp": 0
 }
